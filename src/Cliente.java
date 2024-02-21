@@ -17,4 +17,8 @@ public class Cliente extends Pessoa {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public boolean compra() {return true;}
+
+    public boolean ehVIP() {return true;}
 }

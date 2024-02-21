@@ -70,9 +70,4 @@ abstract class Pessoa {
         }
         return result ;
     }
-
-    public boolean compra() {return true;}
-
-    public boolean ehVIP() {return true;}
-
 }
