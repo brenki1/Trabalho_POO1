@@ -2,20 +2,19 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-abstract class Pessoa {
+public class Pessoa {
 
     private String nome;
     private String dataNascimento; //DDMMAA
     private String CPF;
     private String endereco;
-    private Date dNas; //Garante que a data será exibida sempre no formato desejado, talvez não seja necessário e mantenhamos apenas a string mesmo
+    private final Date dNas; //Garante que a data será exibida sempre no formato desejado, talvez não seja necessário e mantenhamos apenas a string mesmo
                              //Também podemos colocar cada campo da data individualmente int ano int mes e int dia e depois passar tudo pra essa variável
 
     public Date getdNas() {
         return dNas;
     }
 
-    public Pessoa() {} //Construtor padrão
     public Pessoa (String nome, String dataNascimento, String CPF, String endereco) { //falta implementar as verificacoes necessárias, por enqt é só a base
         this.nome = nome;
         this.dataNascimento = dataNascimento;
@@ -70,4 +69,6 @@ abstract class Pessoa {
         }
         return result ;
     }
+
 }
+//TEste
