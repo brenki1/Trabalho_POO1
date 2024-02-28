@@ -8,8 +8,10 @@ public class Pessoa {
     private String dataNascimento; //DDMMAA
     private String CPF;
     private String endereco;
-    private final Date dNas; //Garante que a data será exibida sempre no formato desejado, talvez não seja necessário e mantenhamos apenas a string mesmo
+    private Date dNas; //Garante que a data será exibida sempre no formato desejado, talvez não seja necessário e mantenhamos apenas a string mesmo
                              //Também podemos colocar cada campo da data individualmente int ano int mes e int dia e depois passar tudo pra essa variável
+
+    public Pessoa() {}
 
     public Date getdNas() {
         return dNas;
