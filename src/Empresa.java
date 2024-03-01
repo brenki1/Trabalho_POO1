@@ -3,7 +3,6 @@ public class Empresa {
     private String nomeOF;
 
 
-
     private String nomeDIV;
     private String dataCriacao;
 
