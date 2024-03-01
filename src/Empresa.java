@@ -1,8 +1,14 @@
 public class Empresa {
     private String CNPJ;
     private String nomeOF;
+
+
+
     private String nomeDIV;
     private String dataCriacao;
+
+    protected static double taxaUdiDecola = 0.056;
+
     public String getCNPJ() {
         return CNPJ;
     }
