@@ -1,8 +1,21 @@
 public class Empresa {
     private String CNPJ;
     private String nomeOF;
+
+
+
     private String nomeDIV;
     private String dataCriacao;
+
+    protected static double taxaUdiDecola;
+    /*
+    taxa fixa que as empresas pagam para o udi decola
+    ainda pendente o modo que será utilizado para definir esse atributo
+     */
+
+    public static void setTaxaUdiDecola(double taxaUdiDecola) {
+        Empresa.taxaUdiDecola = taxaUdiDecola;
+    }
     public String getCNPJ() {
         return CNPJ;
     }

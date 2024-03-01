@@ -2,6 +2,16 @@ public class Cliente extends Pessoa {
     private String dataCad;
     private String email;
 
+    private static int nroClienteVip;
+
+    public static int getNroClienteVip() {
+        return nroClienteVip;
+    }
+
+    public static void setNroClienteVip(int nroClienteVip) {
+        Cliente.nroClienteVip = nroClienteVip;
+    }
+
     public String getDataCad() {
         return dataCad;
     }
