@@ -2,11 +2,18 @@ public class Empresa {
     private String CNPJ;
     private String nomeOF;
 
-
     private String nomeDIV;
     private String dataCriacao;
 
     protected static double taxaUdiDecola = 0.056;
+
+    public Empresa(){}
+    public Empresa (String cnpj, String nomeOF, String nomeDIV, String dataCriacao) {
+        CNPJ = cnpj;
+        this.nomeOF = nomeOF;
+        this.nomeDIV = nomeDIV;
+        this.dataCriacao = dataCriacao;
+    }
 
     public String getCNPJ() {
         return CNPJ;

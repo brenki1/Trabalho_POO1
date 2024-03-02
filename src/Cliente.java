@@ -1,11 +1,15 @@
 public class Cliente extends Pessoa {
     private String dataCad;
     private String email;
-
-
     private static int nroClienteVip = 12;
 
+    public Cliente () {}
 
+    public Cliente(String nome, String dataNascimento, String CPF, String endereco, String dataCad, String email) {
+        super(nome, dataNascimento, CPF, endereco);
+        this.dataCad = dataCad;
+        this.email = email;
+    }
 
     public String getDataCad() {
         return dataCad;

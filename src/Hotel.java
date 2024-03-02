@@ -6,12 +6,23 @@ public class Hotel extends Empresa {
     private int stars;
     private boolean accPets;
     private int quartos;
-    private Date checkin; //REQUER FORMATACAO!!
-    private Date checkout; //REQUER FORMATACAO!!
+    private Date checkin; //não usar por enqt
+    private Date checkout; //não usar por enqt
     private String msgDiv;
     private String descricao;
 
     //faltam alguns campos
+
+    public Hotel() {}
+    public Hotel(String cnpj, String nomeOF, String nomeDIV, String dataCriacao, String endereco, int stars, boolean accPets, int quartos, String msgDiv, String descricao){
+        super(cnpj, nomeOF, nomeDIV, dataCriacao);
+        this.endereco = endereco;
+        this.stars = stars;
+        this.accPets = accPets;
+        this.quartos =quartos;
+        this.msgDiv = msgDiv;
+        this.descricao = descricao;
+    }
 
     public String getEndereco() {
         return endereco;

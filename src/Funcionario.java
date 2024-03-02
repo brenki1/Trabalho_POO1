@@ -4,6 +4,12 @@ public class Funcionario extends Pessoa {
 
     private static double comissaoRegistraHotel = 36.12;
 
+    public Funcionario(){}
+    public Funcionario (String nroCLT, double salario) {
+        this.nroCLT = nroCLT;
+        this.salario = salario;
+    }
+
 
 
     //necessario implementar uma classe cliente dentro da funcionario; no item i é especificado que um funcionario pode ser um cliente
