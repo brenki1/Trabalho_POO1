@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Pessoa {
 
-    private String nome;
+    private String nome; //Variável
     private String dataNascimento; //DDMMAA
     private String CPF;
     private String endereco;

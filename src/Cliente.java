@@ -1,6 +1,6 @@
 public class Cliente extends Pessoa {
     private String dataCad;
-    private String email;
+    private String email; //Trabalho poo
     private static int nroClienteVip = 12;
 
     public Cliente () {}
