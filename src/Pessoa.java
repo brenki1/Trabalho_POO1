@@ -37,9 +37,7 @@ public class Pessoa {
         return CPF;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
-    }
+    public void setCPF(String CPF) {this.CPF = CPF;}
 
     public String getEndereco() {
         return endereco;

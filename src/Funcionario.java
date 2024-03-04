@@ -2,7 +2,7 @@ public class Funcionario extends Pessoa {
     private String nroCLT;
     private double salario;
 
-    private static double comissaoRegistraHotel = 36.12;
+    private static double comissaoRegistraHotel = 25.00;
 
     public Funcionario(){}
     public Funcionario (String nroCLT, double salario) {
