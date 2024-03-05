@@ -1,11 +1,15 @@
+import java.util.ArrayList;
+
 public class Empresa {
     private String CNPJ;
     private String nomeOF;
-
     private String nomeDIV;
     private String dataCriacao;
 
     protected static double taxaUdiDecola = 0.056;
+
+    ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+    ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
     public Empresa(){}
     public Empresa (String cnpj, String nomeOF, String nomeDIV, String dataCriacao) {
@@ -47,5 +51,8 @@ public class Empresa {
         this.dataCriacao = dataCriacao;
     }
 
+    public void cadFuncionario(Funcionario f) {
+        funcionarios.add(f);
+    }
 
 }
