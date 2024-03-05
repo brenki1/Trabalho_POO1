@@ -135,7 +135,7 @@ public class Pessoa {
                     return false; //Falso
                 }
             }
-            return false;
+            return true;
         }
     }
 
