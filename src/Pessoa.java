@@ -76,7 +76,7 @@ public class Pessoa {
     }
     //Algorítmo para validar o CPF
         public static boolean validar(String CPF){ // Um método de validação estático foi criado para que possa ser acessado nas classes do mesmo pacote sem que uma instância da classe seja criada
-            CPF = remove(CPF); //Chamando o método para remover os caracteres do cpf e facilitar as operações
+            CPF = remover(CPF); //Chamando o método para remover os caracteres do cpf e facilitar as operações
             int[] vet = CPFtoArray(CPF); //Transformando meu cpf em array
 
             if(verificar(1, vet) == true){ //Passando como parâmetro a primeira posição
@@ -88,10 +88,10 @@ public class Pessoa {
             }
         }
 
-        private static String remove(String CPF){ //Método privado para retirar os caracteres do cpf. Ele é privado para que não corra o risco de ser acessado nas outras classes, pode ser acessado apenas nessa em questão
+        private static String remover(String CPF){ //Método privado para retirar os caracteres do cpf. Ele é privado para que não corra o risco de ser acessado nas outras classes, pode ser acessado apenas nessa em questão
             if(CPF.contains(".") || CPF.contains("-")){
-                CPF = CPF.replaceAll(".", "");
-                CPF = CPF.replaceAll("-", "");
+                CPF = CPF.replace(".", "");
+                CPF = CPF.replace("-", "");
 
             }
             return CPF;
