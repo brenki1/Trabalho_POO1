@@ -29,9 +29,8 @@ public class PassagemIda extends Passagem {
     public double calcPrecoPass(double Preco, double Tx, int classe, double custoExtraTrecho) {
 
         switch(classe) {
-            case 1: return super.calcPrecoPass(Preco, Tx, classe) + custoExtraTrecho; //suponha que 1 significa classe executiva e que a taxa da mesma é 250
-            case 2: return super.calcPrecoPass(Preco, Tx, 2) + custoExtraTrecho; //suponha que 2 seja a economica, ou seja, não há taxa extra
-            case 3: return super.calcPrecoPass(Preco, Tx, classe) + custoExtraTrecho;
+            case 1, 3: return super.calcPrecoPass(Preco, Tx, classe) + custoExtraTrecho;
+            case 2: return super.calcPrecoPass(Preco, Tx, 2) + custoExtraTrecho;
         }
 
         return 0;
