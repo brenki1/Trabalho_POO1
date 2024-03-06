@@ -2,7 +2,7 @@ public class Passagem {
 
     private double Preco;
     private double taxaEmbarque;
-    private int tipoPass; // seria a classe (executiva, economica, etc)
+    private int tipoPass; // 1 = classe economica, 2 = classe executiva, 3 = Primeira classe (premium)
 
     public Passagem (){}
     public Passagem (Double preco, double txemb, int tipo){
@@ -38,8 +38,8 @@ public class Passagem {
     public double calcPrecoPass(double Preco, double Tx, int classe){
 
         switch(classe) {
-            case 1: return Preco + Tx + 250; //suponha que 1 significa classe executiva e que a taxa da mesma é 250
-            case 2: return Preco + Tx; //suponha que 2 seja a economica, ou seja, não há taxa extra
+            case 1: return Preco + Tx;
+            case 2: return Preco + Tx + 250;
             case 3: return Preco + Tx + 500;
         }
 
