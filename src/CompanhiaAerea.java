@@ -16,8 +16,9 @@ public class CompanhiaAerea extends Empresa {
     }
 
     public double getPrecoPass(){
+
         return PrecoPass;
     }
-    //Implementar uma maneira da companhia aerea ser reconhecida pelo trechovoo
+
 
 }
