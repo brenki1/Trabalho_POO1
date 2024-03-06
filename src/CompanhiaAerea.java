@@ -2,6 +2,7 @@ public class CompanhiaAerea extends Empresa {
     private double PrecoPass; //Preço da passagem
 
     public CompanhiaAerea(){}
+    //Construtuor para o cadastro da empresa
     public CompanhiaAerea(String cnpj, String nomeOF, String nomeDIV, String dataCriacao, double PrecoPass){
         super(cnpj, nomeOF, nomeDIV, dataCriacao);
         this.PrecoPass = PrecoPass;
