@@ -154,7 +154,7 @@ public class Hotel extends Empresa {
         this.checkout = checkout;
     }
 
-    public String getMsgDiv() {
+    public String getMsgDiv() { //
 
         return msgDiv;
     }
