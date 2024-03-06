@@ -1,4 +1,6 @@
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+
 public class VerificaData {
     private int ano, mes, dia;
 
@@ -10,6 +12,10 @@ public class VerificaData {
         }
         return LocalDate.now();
 
+    }
+
+    public static LocalDateTime dataHoraCorreta(String dataHora){
+        return LocalDateTime.now();
     }
 
     private static boolean verificaAno(int ano){
