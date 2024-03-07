@@ -8,8 +8,8 @@ public class Empresa {
 
     protected static double taxaUdiDecola = 0.056;
 
-    ArrayList<Cliente> clientes = new ArrayList<Cliente>();
-    ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
+    ArrayList<Cliente> clientes = new ArrayList<>();
+    ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
     public Empresa(){}
     public Empresa (String cnpj, String nomeOF, String nomeDIV, String dataCriacao) {
@@ -51,8 +51,15 @@ public class Empresa {
         this.dataCriacao = dataCriacao;
     }
 
-    public void cadFuncionario(Funcionario f) {
-        funcionarios.add(f);
+    public boolean cadFuncionario(Funcionario f) {
+        boolean valida = Pessoa.validar(f.getCPF());
+
+        if(valida) {
+            funcionarios.add(f);
+            return true;
+        }
+
+        return false;
     }
 
 }
