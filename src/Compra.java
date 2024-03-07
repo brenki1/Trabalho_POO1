@@ -163,8 +163,18 @@ public class Compra {
 
     //Método para efetivar a compra de passagens aéreas
 
+    public void EfetivarPassagem(int qtdPassagem){
+        int Novo; //Variável que atualiza o novo número de passagens
+        if(passagem.getVagasDisponíveis() >= qtdPassagem){
+            Novo = passagem.getVagasDisponíveis() - qtdPassagem;
+            passagem.setVagasDisponíveis(Novo); //Atualizando passagens disponíveis
 
+            this.valorTotal = qtdPassagem * passagem.getPrecoPass;
+            atualizaCompra(qtdPassagem);
+        }
+    }
 
+    //Método para efetivar a compra de Diárias no Hotel
 
 
 }

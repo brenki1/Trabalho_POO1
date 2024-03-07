@@ -5,15 +5,18 @@ public class TrechoVoo {
     private String destino;
     private String HoraSaida;
     private String HoraChegada;
+
+    private int VagasDisponíveis;
     private CompanhiaAerea Nome; //Nome da companhia aerea acossiada ao trecho
 
     //Construtor para os dados
-    public TrechoVoo(String codigo, String origem, String destino, String HoraSaida, String HoraChegada){
+    public TrechoVoo(String codigo, String origem, String destino, String HoraSaida, String HoraChegada, int VagasDisponíveis ){
         this.codigo = codigo;
         this.origem = origem;
         this.destino = destino;
         this.HoraSaida = HoraSaida;
         this.HoraChegada = HoraChegada;
+        this.VagasDisponíveis = VagasDisponíveis;
 
     }
 
@@ -58,5 +61,14 @@ public class TrechoVoo {
         return HoraSaida;
     }
 
+    public void setVagasDisponíveis(int vagasDisponíveis) {
+        VagasDisponíveis = vagasDisponíveis;
+    }
+
+    public int getVagasDisponíveis() {
+        return VagasDisponíveis;
+    }
+
     //Importante implementar os voos de cada trecho, representar o local de saída e chegada, saber a data e hora de chegada, Saber o nro de vagas disponíveis e preço da passagem(Que pode ser diferente para cada voo)
+
 }
