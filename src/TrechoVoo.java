@@ -10,6 +10,8 @@ public class TrechoVoo {
     private CompanhiaAerea Nome; //Nome da companhia aerea acossiada ao trecho
 
     //Construtor para os dados
+    public TrechoVoo(){}
+
     public TrechoVoo(String codigo, String origem, String destino, String HoraSaida, String HoraChegada, int VagasDisponíveis ){
         this.codigo = codigo;
         this.origem = origem;

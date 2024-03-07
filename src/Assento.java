@@ -3,6 +3,8 @@ public class Assento {
     private int qtdDisponivelAssentos;
     private int[][] esquemaAssentos;
 
+    public Assento(){}
+
     public Assento (int qtdAssentos, int qtdDisponivelAssentos, int[][]esquemaAssentos){
         setQtdAssentos(qtdAssentos);
         setQtdDisponivelAssentos(qtdDisponivelAssentos);

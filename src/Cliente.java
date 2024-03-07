@@ -46,8 +46,7 @@ public class Cliente extends Pessoa {
     public boolean cliente_Vip(){
         if(this.Compras >= nroClienteVip) {
             return true;
-        }else
-        return false;
+        }else return false;
     }
 
     //Método para registrar as pesquisas
