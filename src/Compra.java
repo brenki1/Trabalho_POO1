@@ -1,31 +1,26 @@
 import java.time.*;
+import java.time.format.DateTimeFormatter;
+
 public class Compra {
     private Cliente comprador; //Cliente
     private TrechoVoo passagem;
     private int qtdPassagem; //Quantidade de passagens
     private int qtdDiarias; //Quantidade de diarias
-    private String Data; //Acho que não é necessário
-    private int Ano;
-    private int Mes;
-    private int Dia;
-    private String hora;
+    private String DataHora; //Acho que não é necessário
     private double valorTotal; //Valor total da compra
     private String Pagamento; //Forma de pagamento
     private int qtdCompras; //Indicando a quantidade de compras
     private int AtualCompra; //Valor de compra que será atualizado no método
     //Construtuor para os atributos
-    public Compra(Cliente comprador, TrechoVoo passagem, int qtdPassagem, int qtdDiarias, int Ano, int Mes, int dia, String hora, double valorTotal, String Pagamento, int qtdCompras){
+    public Compra(Cliente comprador, TrechoVoo passagem, int qtdPassagem, int qtdDiarias, double valorTotal, String Pagamento, int qtdCompras, String dataHora){
         this.comprador = comprador;
         this.passagem = passagem;
         this.qtdPassagem = qtdPassagem;
         this.qtdDiarias = qtdDiarias;
-        this.Ano = Ano;
-        this.Mes = Mes;
-        this.Dia = Dia;
-        this.hora = hora;
         this.valorTotal = valorTotal;
         this.Pagamento = Pagamento;
         this.qtdCompras = qtdCompras;
+        setDataHora(dataHora);
     }
 
     //Métodos getters e setters
@@ -63,36 +58,16 @@ public class Compra {
         return qtdDiarias;
     }
 
-    public void setAno(int ano) {
-        Ano = ano;
-    }
-
-    public int getAno() {
-        return Ano;
-    }
-
-    public void setMes(int mes) {
-        Mes = mes;
-    }
-
-    public int getMes() {
-        return Mes;
-    }
-
-    public void setDia(int dia) {
-        Dia = dia;
-    }
-
-    public int getDia() {
-        return Dia;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
-    }
-
-    public String getHora() {
-        return hora;
+    public void setDataHora(String dataHora){
+        VerificaData v = new VerificaData();
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        if(v.verificaDataHora(dataHora)){
+            DataHora = dataHora;
+        }
+        else{
+            LocalDateTime agora = LocalDateTime.now();
+            String agoraFormat = agora.format(formatador);
+        }
     }
 
     public void setPagamento(String pagamento) {
