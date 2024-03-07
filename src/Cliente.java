@@ -100,9 +100,4 @@ public class Cliente extends Pessoa {
     }
 
 
-    //Talvez o que esteja abaixo não seja necessário
-    public boolean compra() {
-        return true;
-    }
-
 }
