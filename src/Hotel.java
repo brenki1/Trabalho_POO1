@@ -1,6 +1,3 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 public class Hotel extends Empresa {
     private String endereco;
     private int stars;
@@ -11,6 +8,7 @@ public class Hotel extends Empresa {
 
     private int quartos_Triplos; //Número de quartos triplos
 
+    private int DiariasVendidas = 0; //Representa um contador para as diárias vendidas, dessa forma é possível calcular o valor fixo a ser pago ao udi decola
     private double valorDiariaSingle;
     private double valorDiariaDuplo;
     private double valorDiariaTriplo;
@@ -195,9 +193,34 @@ public class Hotel extends Empresa {
     }
 
     //Método para calcular o valor a ser pago para o Udi_Decola
+    public double venda_diária(int tipoQuarto, int qtdDiarias){ //'TipoQuarto' irá representar qual quarto foi escolhido
+        if(tipoQuarto == 1){ //Se o quarto for single
+            if(quartos_Single > 0){
+                quartos_Single --; //Decrementando a quantidade de quartos
+                DiariasVendidas+= qtdDiarias; //Incrementando o contador de diária
+            }else if(tipoQuarto == 2){ //Quarto Duplo
+                if(quartos_Duplos > 0){
+                    quartos_Duplos--;
+                    DiariasVendidas+= qtdDiarias;
+                }else if(tipoQuarto == 3){ //Quarto Triplo
+                    if(quartos_Triplos > 0){
+                        quartos_Triplos--;
+                        DiariasVendidas+= qtdDiarias;
+                    }
+                }
+
+            }
+          }
+        return 0;
+    }
+    //Método que calcula o valor para Udi
+    public double ValorParaUdi(){
+        return ValorUdi * DiariasVendidas;
+    }
+
+    }
 
 
 
 
 
-}
