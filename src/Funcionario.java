@@ -1,14 +1,20 @@
 public class Funcionario extends Pessoa {
     private String nroCLT;
     private double salario;
-
     private static double comissaoRegistraHotel = 25.00;
+    private boolean Executivo; //Classifica um funcionário se ele faz parcerias com hotéis (é executivo)
+    private int qtdParcerias; //Quantidade de parcerias que um funcionário fez com hotéis
 
     public Funcionario(){}
     public Funcionario (String nome, String dataNascimento, String CPF, String endereco, String nroCLT, double salario) {
         super(nome, dataNascimento, CPF, endereco);
         this.nroCLT = nroCLT;
         this.salario = salario;
+    }
+    public Funcionario (String nome, String dataNascimento, String CPF, String endereco, String nroCLT, double salario, int qtdParcerias){
+        super(nome,dataNascimento,CPF,endereco);
+        this.nroCLT = nroCLT;
+        setSalario(salario,qtdParcerias);
     }
 
     public boolean cadFuncionario(Funcionario f, String nome, String dataNascimento, String CPF, String endereco, String nroCLT, double salario) {
@@ -59,6 +65,14 @@ public class Funcionario extends Pessoa {
 
     }
 
+    public boolean isExecutivo() {
+        return Executivo;
+    }
+
+    public void setExecutivo(boolean ehExecutivo) {
+        this.Executivo = ehExecutivo;
+    }
+
     public String getNroCLT() {
         return nroCLT;
     }
@@ -74,6 +88,9 @@ public class Funcionario extends Pessoa {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+    public void setSalario(double salario, int qtdParcerias){
+        this.salario = salario + (qtdParcerias * comissaoRegistraHotel);
+    }
 
     public static double getComissaoRegistraHotel() {
         return comissaoRegistraHotel;
@@ -83,6 +100,5 @@ public class Funcionario extends Pessoa {
         Funcionario.comissaoRegistraHotel = comissaoRegistraHotel;
     }
 
-    //necessario implementar uma classe cliente dentro da funcionario; no item i é especificado que um funcionario pode ser um cliente
 
 }

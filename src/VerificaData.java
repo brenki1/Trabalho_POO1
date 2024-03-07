@@ -135,6 +135,12 @@ public class VerificaData {
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return l.format(formatador);
     }
+    public static boolean Antes(LocalDate data1, LocalDate data2){
+        return data1.isBefore(data2);
+    }
+    public static boolean Antes(LocalDateTime dataHora1, LocalDateTime dataHora2){
+        return dataHora1.isBefore(dataHora2);
+    }
 
     private static boolean verificaHora(int hora){
         return hora >=0 && hora < 24;
