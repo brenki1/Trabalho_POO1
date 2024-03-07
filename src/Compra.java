@@ -4,6 +4,7 @@ import java.time.format.DateTimeFormatter;
 public class Compra {
     private Cliente comprador; //Cliente
     private TrechoVoo passagem;
+    private Hotel hotel;
     private int qtdPassagem; //Quantidade de passagens
     private int qtdDiarias; //Quantidade de diarias
     private String DataHora; //Acho que não é necessário
@@ -175,6 +176,31 @@ public class Compra {
     }
 
     //Método para efetivar a compra de Diárias no Hotel
+    public void EfetivarDiaria(int qtdDiarias, int TipoQuarto){
+        int quartoDisp = 0; //Armazena o número de quartos disponíveis
+        double diarias = 0; //Valor da diária
+        double Total = 0; //Total das diárias
 
+        if(TipoQuarto == 1){ //Quarto Single
+            quartoDisp = hotel.getQuartos_Single();
+        }else if(TipoQuarto == 2){
+            quartoDisp = hotel.getQuartos_Duplos();
+        }else if(TipoQuarto == 3){
+            quartoDisp = hotel.getQuartos_Triplos();
+        }
+        if(quartoDisp >= 1){
+            if(TipoQuarto == 1){
+                diarias = hotel.getValorDiariaSingle();
+            }else if(TipoQuarto == 2){
+                diarias = hotel.getValorDiariaDuplo();
+            }else if(TipoQuarto == 3){
+                diarias = hotel.getValorDiariaTriplo();
+            }
+            Total = quartoDisp * diarias;
+
+            this.valorTotal += Total; //Atualizando Valor total
+            atualizaCompra(qtdDiarias); //Atualizando Compras
+        }
+    }
 
 }
