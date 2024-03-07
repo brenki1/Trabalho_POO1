@@ -8,19 +8,12 @@ public class Pessoa {
     private String dataNascimento; //DDMMAA
     private String CPF;
     private String endereco;
-    private Date dNas; //Garante que a data será exibida sempre no formato desejado, talvez não seja necessário e mantenhamos apenas a string mesmo
-                             //Também podemos colocar cada campo da data individualmente int ano int mes e int dia e depois passar tudo pra essa variável
 
     public Pessoa() {}
-
-    public Date getdNas() {
-        return dNas;
-    }
 
     public Pessoa (String nome, String dataNascimento, String CPF, String endereco) { //falta implementar as verificacoes necessárias, por enqt é só a base
         this.nome = nome;
         this.dataNascimento = dataNascimento;
-        dNas = StringToDate(dataNascimento);
         this.CPF = CPF;
         this.endereco = endereco;
     }
@@ -75,7 +68,7 @@ public class Pessoa {
         return result ;
     }
     //Algorítmo para validar o CPF
-        public static boolean validar(String CPF){ // Um método de validação estático foi criado para que possa ser acessado nas classes do mesmo pacote sem que uma instância da classe seja criada
+        public static boolean validar(String CPF){ // Um método de validação estático foi criado para que possa ser acessado nas classes do mesmo pa-cote sem que uma instância da classe seja criada
             CPF = remover(CPF); //Chamando o método para remover os caracteres do cpf e facilitar as operações
             int[] vet = CPFtoArray(CPF); //Transformando meu cpf em array
 
