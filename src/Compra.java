@@ -169,7 +169,7 @@ public class Compra {
             Novo = passagem.getVagasDisponíveis() - qtdPassagem;
             passagem.setVagasDisponíveis(Novo); //Atualizando passagens disponíveis
 
-            this.valorTotal = qtdPassagem * passagem.getPrecoPass;
+            this.valorTotal += qtdPassagem * passagem.getPrecoPass;
             atualizaCompra(qtdPassagem);
         }
     }
