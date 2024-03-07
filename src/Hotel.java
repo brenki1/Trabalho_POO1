@@ -22,6 +22,7 @@ public class Hotel extends Empresa {
     private Date checkout; //não usar por enqt
     private String msgDiv;
     private String descricao;
+    private double ValorUdi; //Valor fixo a ser pago para o Udi Decola
 
     //faltam alguns campos
 
@@ -172,6 +173,10 @@ public class Hotel extends Empresa {
 
         this.descricao = descricao;
     }
+
+    //Método para calcular o valor a ser pago para o Udi_Decola
+
+
 
 
 

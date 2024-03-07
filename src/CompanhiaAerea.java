@@ -1,5 +1,6 @@
 public class CompanhiaAerea extends Empresa {
     private double PrecoPass; //Preço da passagem
+    private double ValorUdi; //Valor a ser pago para o Udi Decola
 
     public CompanhiaAerea(){}
     //Construtuor para o cadastro da empresa
@@ -19,6 +20,17 @@ public class CompanhiaAerea extends Empresa {
 
         return PrecoPass;
     }
+    //Método para calcular o valor fixo a ser pago ao Udi Decola
+    public void ValorUdi(int Vendidas){ //'Vendidas' Representa o número de passagens vendidas
+        ValorUdi = Vendidas * PrecoPass;
 
+    }
 
+    public void setValorUdi(double valorUdi) {
+        ValorUdi = valorUdi;
+    }
+
+    public double getValorUdi() { //Retornando o valor a ser pago
+        return ValorUdi;
+    }
 }

@@ -11,9 +11,10 @@ public class Compra {
     private String hora;
     private double valorTotal; //Valor total da compra
     private String Pagamento; //Forma de pagamento
-
+    private int qtdCompras; //Indicando a quantidade de compras
+    private int AtualCompra; //Valor de compra que será atualizado no método
     //Construtuor para os atributos
-    public Compra(Cliente comprador, TrechoVoo passagem, int qtdPassagem, int qtdDiarias, int Ano, int Mes, int dia, String hora, double valorTotal, String Pagamento){
+    public Compra(Cliente comprador, TrechoVoo passagem, int qtdPassagem, int qtdDiarias, int Ano, int Mes, int dia, String hora, double valorTotal, String Pagamento, int qtdCompras){
         this.comprador = comprador;
         this.passagem = passagem;
         this.qtdPassagem = qtdPassagem;
@@ -24,6 +25,7 @@ public class Compra {
         this.hora = hora;
         this.valorTotal = valorTotal;
         this.Pagamento = Pagamento;
+        this.qtdCompras = qtdCompras;
     }
 
     //Métodos getters e setters
@@ -108,6 +110,24 @@ public class Compra {
     public double getValorTotal() {
         return valorTotal;
     }
+
+    public void setQtdCompras(int qtdCompras) {
+        this.qtdCompras = qtdCompras;
+    }
+
+    public int getQtdCompras() {
+        return qtdCompras;
+    }
+
+    //Método para atualizar o número de compras, Talves seja necessário fazer isso apenas na classe cliente
+    public void atualizaCompra(int qtdCompras){
+        if(qtdCompras == 0 || qtdCompras > 0){
+            AtualCompra = comprador.getCompras(); //Atribuindo à variável o valor de compra
+            comprador.setCompras(AtualCompra + 1); //Adcionando 1 ao número de compras
+        }
+    }
+
+
     //Montar o método para calcular o valor total
     //Para verificar a data
 }
