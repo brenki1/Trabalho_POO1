@@ -51,15 +51,8 @@ public class Empresa {
         this.dataCriacao = dataCriacao;
     }
 
-    public boolean cadFuncionario(Funcionario f) {
-        boolean valida = Pessoa.validar(f.getCPF());
-
-        if(valida) {
-            funcionarios.add(f);
-            return true;
-        }
-
-        return false;
+    public void cadFuncionario(Funcionario f) {
+        funcionarios.add(f);
     }
 
 }

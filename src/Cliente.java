@@ -53,8 +53,8 @@ public class Cliente extends Pessoa {
 
     //Método para registrar as pesquisas
     public void RegistroPesquisa(String origem, String destino, String dataInicio, String dataFim){
-        String[] pesquisa = {origem, destino, dataInicio, dataFim};
-        pesquisa.add(pesquisa); //Corrigir erro
+        String[] pesquisaArray= {origem, destino, dataInicio, dataFim};
+        pesquisa.add(pesquisaArray); //Registrando a pesquisa em um array de vetores
     }
 
 

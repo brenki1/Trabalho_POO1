@@ -1,5 +1,5 @@
 public class TrechoVoo {
-    private String codigo; //Código identificador
+    private String codigo; //Código identificador 3 dígitos
     private String origem; //Local de origem
     private String destino;
     private String HoraSaida;
