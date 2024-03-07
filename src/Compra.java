@@ -59,14 +59,12 @@ public class Compra {
     }
 
     public void setDataHora(String dataHora){
-        VerificaData v = new VerificaData();
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        if(v.verificaDataHora(dataHora)){
+        if(VerificaData.verificaDataHora(dataHora)){
             DataHora = dataHora;
         }
         else{
-            LocalDateTime agora = LocalDateTime.now();
-            String agoraFormat = agora.format(formatador);
+            dataHora = VerificaData.dataAtual();
         }
     }
 

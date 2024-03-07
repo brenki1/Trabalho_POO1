@@ -130,6 +130,12 @@ public class VerificaData {
         return false;
     }
 
+    public static String dataAtual(){
+        LocalDateTime l = LocalDateTime.now();
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return l.format(formatador);
+    }
+
     private static boolean verificaHora(int hora){
         return hora >=0 && hora < 24;
     }
