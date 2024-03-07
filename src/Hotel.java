@@ -18,8 +18,8 @@ public class Hotel extends Empresa {
     private double desconto; //Valor a ser definido
 
     private boolean cancelar; //Objeto para cancelar a diária
-    private Date checkin; //não usar por enqt
-    private Date checkout; //não usar por enqt
+    private String checkin; //não usar por enqt
+    private String checkout; //não usar por enqt
     private String msgDiv;
     private String descricao;
     private double ValorUdi; //Valor fixo a ser pago para o Udi Decola
@@ -27,7 +27,7 @@ public class Hotel extends Empresa {
     //faltam alguns campos
 
     public Hotel() {}
-    public Hotel(String cnpj, String nomeOF, String nomeDIV, String dataCriacao, String endereco, int stars, boolean accPets, int quartos_Single, int quartos_Duplos, int quartos_Triplos, double valorDiariaSingle,  double valorDiariaDuplo, double valorDiariaTriplo, double desconto, boolean cancelar, String msgDiv, String descricao){
+    public Hotel(String cnpj, String nomeOF, String nomeDIV, String dataCriacao, String endereco, int stars, boolean accPets, int quartos_Single, int quartos_Duplos, int quartos_Triplos, double valorDiariaSingle,  double valorDiariaDuplo, double valorDiariaTriplo, double desconto, boolean cancelar, String msgDiv, String descricao, String checkin, String checkout, double valorudi){
         super(cnpj, nomeOF, nomeDIV, dataCriacao);
         this.endereco = endereco;
         this.stars = stars;
@@ -41,6 +41,10 @@ public class Hotel extends Empresa {
         this.desconto = desconto;
         this.msgDiv = msgDiv;
         this.descricao = descricao;
+        this.checkin = checkin;
+        this.checkout = checkout;
+        this.cancelar = cancelar;
+        this.ValorUdi = valorudi;
     }
 
     public String getEndereco() {
@@ -136,21 +140,21 @@ public class Hotel extends Empresa {
         return desconto;
     }
 
-    public Date getCheckin() {
+    public String getCheckin() {
         return checkin;
     }
 
-    public void setCheckin(Date checkin) {
+    public void setCheckin(String checkin) {
 
         this.checkin = checkin;
     }
 
-    public Date getCheckout() {
+    public String getCheckout() {
 
         return checkout;
     }
 
-    public void setCheckout(Date checkout) {
+    public void setCheckout(String checkout) {
 
         this.checkout = checkout;
     }
@@ -172,6 +176,22 @@ public class Hotel extends Empresa {
     public void setDescricao(String descricao) {
 
         this.descricao = descricao;
+    }
+
+    public void setQuartos_Triplos(int quartos_Triplos) {
+        this.quartos_Triplos = quartos_Triplos;
+    }
+
+    public double getValorUdi() {
+        return ValorUdi;
+    }
+
+    public void setValorUdi(double valorUdi) {
+        ValorUdi = valorUdi;
+    }
+
+    public double aplicaDesconto (double valorDiaria, double desconto) {
+        return valorDiaria - (valorDiaria*desconto); // isso caso o desconto seja em porcentagem, ou faremos com valor fixo?
     }
 
     //Método para calcular o valor a ser pago para o Udi_Decola
