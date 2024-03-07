@@ -215,7 +215,7 @@ public class Hotel extends Empresa {
     }
     //Método que calcula o valor para Udi
     public double ValorParaUdi(){
-        return ValorUdi * DiariasVendidas;
+        return ValorUdi * DiariasVendidas; //Retornando o valor
     }
 
     }
