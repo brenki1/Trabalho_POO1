@@ -1,9 +1,11 @@
+import java.util.ArrayList;
+
 public class Cliente extends Pessoa {
     private String dataCad;
     private String email;
     private static int nroClienteVip = 12; //Limite de compras para se tornar vip
-    private int Compras; //Representa o número de compras
-
+    private int Compras; //Representa o número de compra
+    private ArrayList<String[]>pesquisa; //Um arrayList de strings foi criado para armazenar as pesquisas feitas pelo cliente
 
     public Cliente () {}
 
@@ -12,6 +14,7 @@ public class Cliente extends Pessoa {
         this.dataCad = dataCad;
         this.email = email;
         this.Compras = compras; //Adcionando as compras
+        this.pesquisa = new ArrayList<>(); //Inicializando o vetor que armazena as pesquisas
     }
 
     public String getDataCad() {
@@ -47,6 +50,13 @@ public class Cliente extends Pessoa {
 
         return false;
     }
+
+    //Método para registrar as pesquisas
+    public void RegistroPesquisa(String origem, String destino, String dataInicio, String dataFim){
+        String[] pesquisa = {origem, destino, dataInicio, dataFim};
+        pesquisa.add(pesquisa); //Corrigir erro
+    }
+
 
     //Talvez o que esteja abaixo não seja necessário
     public boolean compra() {
