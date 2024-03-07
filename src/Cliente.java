@@ -43,10 +43,8 @@ public class Cliente extends Pessoa {
     }
 
     //Método que indica se é vip
-    public boolean cliente_Vip(int compras){
-        if(compras > nroClienteVip){
-            return true;
-        }
+    public boolean cliente_Vip(){
+        if(this.Compras >= nroClienteVip) return true;
 
         return false;
     }
@@ -57,12 +55,49 @@ public class Cliente extends Pessoa {
         pesquisa.add(pesquisaArray); //Registrando a pesquisa em um array de vetores
     }
 
+    public boolean cadCliente(Cliente c, String dataCad, String nome, String dataNascimento, String CPF, String endereco, String email) {
+        boolean valida = Pessoa.validar(CPF);
+
+        dataCad = VerificaData.dataAtual();
+
+        c.setDataCad(dataCad);
+
+        if(valida)
+            c.setCPF(CPF);
+        else {
+            c.setCPF("");
+            return false;
+        }
+
+        if(VerificaData.verificaData(dataNascimento)) {
+            c.setDataNascimento(dataNascimento);
+        } else {
+            c.setDataNascimento("");
+            return false;
+        }
+
+        if(endereco.isEmpty()) {
+            c.setEndereco("");
+            return false;
+        } else c.setEndereco(endereco);
+
+        if(nome.isEmpty()){
+            c.setNome("");
+            return false;
+        } else c.setNome(nome);
+
+        if(email.isEmpty()) {
+            c.setEmail("");
+            return false;
+        } else c.setEmail(email);
+
+
+    }
+
 
     //Talvez o que esteja abaixo não seja necessário
     public boolean compra() {
-        return true;}
-
-    public boolean ehVIP() {
         return true;
     }
+
 }

@@ -13,46 +13,50 @@ public class Funcionario extends Pessoa {
 
     public boolean cadFuncionario(Funcionario f, String nome, String dataNascimento, String CPF, String endereco, String nroCLT, double salario) {
         boolean valida = Pessoa.validar(CPF);
+        int cont = 0;
 
-        VerificaData v = new VerificaData();
-
-        if(valida)
+        if(valida) {
             f.setCPF(CPF);
-        else {
+            cont++;
+        } else {
             f.setCPF("");
             return false;
         }
 
-        if(nome.isEmpty() == true) {
-            f.setNome(" ");
+        if(nome.isEmpty()) {
+            f.setNome("");
             return false;
         }
-        else f.setNome(nome);
+        else  {f.setNome(nome); cont++;}
 
-        if(v.verificaData(dataNascimento) == true) {
+        if(VerificaData.verificaData(dataNascimento)) {
             f.setDataNascimento(dataNascimento);
+            cont++;
         } else {
             f.setDataNascimento("");
             return false;
         }
 
-        if(endereco.isEmpty() == true) {
+        if(endereco.isEmpty()) {
             f.setEndereco("");
             return false;
-        }
+        } else {f.setEndereco(endereco); cont++;}
 
         if(salario < 1412){
             System.out.println("Esse salario eh inferior ao salario minimo de um CLT no Brasil, por favor insira um salario valido");
             f.setSalario(0);
             return false;
-        } else f.setSalario(salario);
+        } else {f.setSalario(salario); cont++;}
 
-        if(nroCLT.isEmpty() == true) {
+        if(nroCLT.isEmpty()) {
             f.setNroCLT("");
             return false;
-        } else f.setNroCLT(nroCLT);
+        } else {f.setNroCLT(nroCLT); cont++;}
+
+        if(cont == 6) return true;
 
         return false;
+
     }
 
     public String getNroCLT() {
