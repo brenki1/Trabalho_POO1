@@ -51,6 +51,7 @@ public class Voo {
     }
 
     public void setPrecoPassagem(double precoPassagem) {
+
         this.precoPassagem = precoPassagem;
     }
 }

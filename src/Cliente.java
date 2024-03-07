@@ -44,8 +44,9 @@ public class Cliente extends Pessoa {
 
     //Método que indica se é vip
     public boolean cliente_Vip(){
-        if(this.Compras >= nroClienteVip) return true;
-
+        if(this.Compras >= nroClienteVip) {
+            return true;
+        }else
         return false;
     }
 

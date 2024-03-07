@@ -1,4 +1,5 @@
 public class TrechoVoo {
+    public double getPrecoPass;
     private String codigo; //Código identificador 3 dígitos
     private String origem; //Local de origem
     private String destino;
