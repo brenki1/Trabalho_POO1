@@ -11,6 +11,7 @@ public class Voo {
     public Voo(TrechoVoo Trecho,Assento assentos, String horaSaida, String horaChegada, double precoPassagem){
         setPrecoPassagem(precoPassagem);
         setTrecho(Trecho);
+        setAssentos(assentos);
         setHoraSaida(horaSaida);
         setHoraChegada(horaChegada);
     }
