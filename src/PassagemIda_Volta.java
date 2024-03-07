@@ -6,7 +6,12 @@ public class PassagemIda_Volta extends Passagem{
 
     public PassagemIda_Volta() {}
 
-
+    public PassagemIda_Volta(double preco, double txemb, int tipo,TrechoVoo ida, TrechoVoo volta, double custoExtraTrecho){
+        super(preco,txemb,tipo);
+        this.ida = ida;
+        this.volta = volta;
+        this.custoExtraTrecho = custoExtraTrecho;
+    }
 
     public TrechoVoo getIda() {
         return ida;

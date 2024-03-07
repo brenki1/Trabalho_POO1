@@ -4,7 +4,7 @@ public class PassagemIda extends Passagem {
     private double custoExtraTrecho;
 
     public PassagemIda(){}
-    public PassagemIda(Double preco, double txemb, int tipo, TrechoVoo ida, double custoExtra) {
+    public PassagemIda(double preco, double txemb, int tipo, TrechoVoo ida, double custoExtra) {
         super(preco, txemb, tipo);
         this.ida = ida;
         custoExtraTrecho = custoExtra;
