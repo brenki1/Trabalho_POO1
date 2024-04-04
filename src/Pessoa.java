@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Pessoa {
+public class Pessoa implements Serializable {
 
     private String nome; //Variável
     private String dataNascimento; //DDMMAA
