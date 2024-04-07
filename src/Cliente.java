@@ -99,5 +99,11 @@ public class Cliente extends Pessoa {
         return false;
     }
 
+    //Método To-String, foi implementado para obetermos uma representação de texto Legível de um objeto do tipo Cliente quando for usado na interface gráfica
+    public String ToString(){
+        return "Nome: " + getNome() + ", Data de Cadastro: " + getDataCad() + ", Email: " + getEmail() + ", Número de Compras: " + getCompras();
+    }
+
+
 
 }
