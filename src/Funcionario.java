@@ -100,5 +100,10 @@ public class Funcionario extends Pessoa {
         Funcionario.comissaoRegistraHotel = comissaoRegistraHotel;
     }
 
+    //Método ToString para representar textualmente os dados do Funcionário
+    public String toString() {
+        return "Funcionario{" + "nome='" + getNome() + '\'' + ", CPF='" + getCPF() + '\'' + ", dataNascimento='" + getDataNascimento() + '\'' + ", endereco='" + getEndereco() + '\'' + ", nroCLT='" + nroCLT + '\'' + ", salario=" + salario + '}';
+    }
+
 
 }
