@@ -16,7 +16,7 @@ public class DadosCliente { //Classe que armazena os dados do Cliente
     //Método para buscar um cliente pelo CPF
     public Cliente Buscar(String CPF){
         for(Cliente cliente : clientes){
-            if(cliente.getCPF().equals(CPF)){/////
+            if(cliente.getCPF().equals(CPF)){
                 return cliente;
             }
         }
