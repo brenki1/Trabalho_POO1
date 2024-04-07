@@ -55,4 +55,8 @@ public class Empresa {
         funcionarios.add(f);
     }
 
+    public void cadCliente(Cliente c) {
+        clientes.add(c);
+    }
+
 }

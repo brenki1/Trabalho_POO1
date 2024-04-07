@@ -19,6 +19,8 @@ public class Compra {
     private double ValorDiaria_Triplo;
 
     //Construtuor para os atributos
+    public Compra(){}
+
     public Compra(Cliente comprador, TrechoVoo passagem, int qtdPassagem, int qtdDiarias, double valorTotal, String Pagamento, int qtdCompras, String dataHora, double PrecoPass, double ValorDiaria_Single, double ValorDiaria_Duplo, double ValorDiaria_Triplo){
         this.comprador = comprador;
         this.passagem = passagem;

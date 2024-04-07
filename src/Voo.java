@@ -6,7 +6,8 @@ public class Voo {
     private LocalDateTime HoraSaida;
     private LocalDateTime HoraChegada;
     private double precoPassagem;
-    private VerificaData v = new VerificaData();
+
+    public Voo(){}
 
     public Voo(TrechoVoo Trecho,Assento assentos, String horaSaida, String horaChegada, double precoPassagem){
         setPrecoPassagem(precoPassagem);
@@ -20,14 +21,14 @@ public class Voo {
         return HoraSaida;
     }
     public void setHoraSaida(String HoraSaida){
-        this.HoraSaida = v.dataHoraCorreta(HoraSaida);
+        this.HoraSaida = VerificaData.dataHoraCorreta(HoraSaida);
     }
 
     public LocalDateTime getHoraChegada() {
         return HoraChegada;
     }
     public void setHoraChegada(String HoraChegada){
-        this.HoraChegada = v.dataHoraCorreta(HoraChegada);
+        this.HoraChegada = VerificaData.dataHoraCorreta(HoraChegada);
     }
 
     public TrechoVoo getTrecho() {
