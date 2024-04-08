@@ -46,4 +46,18 @@ public class PassagemIda_Volta extends Passagem{
 
         return 0;
     }
+    //Método que apresenta os dados da classe Passagem de volta
+    public String toString() {
+        return "PassagemIda_Volta{" +
+                "ida=" + ida +
+                ", volta=" + volta +
+                ", custoExtraTrecho=" + custoExtraTrecho +
+                ", Preco=" + getPreco() +
+                ", taxaEmbarque=" + getTaxaEmbarque() +
+                ", tipoPass=" + getTipoPass() +
+                '}';
+    }
+
+
+
 }
