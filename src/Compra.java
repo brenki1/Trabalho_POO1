@@ -205,4 +205,24 @@ public class Compra {
         }
     }
 
+    //Método para exibir textualmente os dados das compras
+    public String toString() {
+        return "Compra{" +
+                "comprador=" + comprador +
+                ", passagem=" + passagem +
+                ", hotel=" + hotel +
+                ", qtdPassagem=" + qtdPassagem +
+                ", qtdDiarias=" + qtdDiarias +
+                ", DataHora='" + DataHora + '\'' +
+                ", valorTotal=" + valorTotal +
+                ", Pagamento='" + Pagamento + '\'' +
+                ", qtdCompras=" + qtdCompras +
+                ", AtualCompra=" + AtualCompra +
+                ", PrecoPass=" + PrecoPass +
+                ", ValorDiaria_Single=" + ValorDiaria_Single +
+                ", ValorDiaria_Duplo=" + ValorDiaria_Duplo +
+                ", ValorDiaria_Triplo=" + ValorDiaria_Triplo +
+                '}';
+    }
+
 }
