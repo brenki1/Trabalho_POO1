@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Assento {
     private int qtdAssentos;
     private int qtdDisponivelAssentos;
@@ -40,4 +42,13 @@ public class Assento {
     public void setEsquemaAssentos(int[][] esquemaAssentos) {
         this.esquemaAssentos = esquemaAssentos;
     }
+    //Método que representa em formato se String os Dados dos atributos da classe assento
+    public String toString() {
+        return "Assento{" +
+                "qtdAssentos=" + qtdAssentos +
+                ", qtdDisponivelAssentos=" + qtdDisponivelAssentos +
+                ", esquemaAssentos=" + Arrays.deepToString(esquemaAssentos) + //Usado para representar o formato da matriz
+                '}';
+    }
+
 }
