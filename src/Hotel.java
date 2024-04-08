@@ -218,6 +218,29 @@ public class Hotel extends Empresa {
         return ValorUdi * DiariasVendidas; //Retornando o valor
     }
 
+    //Método para representar textualmente os dados do Hotel
+    public String toString() {
+        return "Hotel{" +
+                "endereco='" + endereco + '\'' +
+                ", stars=" + stars +
+                ", accPets=" + accPets +
+                ", quartos_Single=" + quartos_Single +
+                ", quartos_Duplos=" + quartos_Duplos +
+                ", quartos_Triplos=" + quartos_Triplos +
+                ", DiariasVendidas=" + DiariasVendidas +
+                ", valorDiariaSingle=" + valorDiariaSingle +
+                ", valorDiariaDuplo=" + valorDiariaDuplo +
+                ", valorDiariaTriplo=" + valorDiariaTriplo +
+                ", desconto=" + desconto +
+                ", cancelar=" + cancelar +
+                ", checkin='" + checkin + '\'' +
+                ", checkout='" + checkout + '\'' +
+                ", msgDiv='" + msgDiv + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", ValorUdi=" + ValorUdi +
+                '}';
+    }
+
     }
 
 
