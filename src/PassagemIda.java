@@ -35,4 +35,14 @@ public class PassagemIda extends Passagem {
 
         return 0;
     }
+    //Método usado para representar em formato de string os dados da passagem de ida
+    public String toString() {
+        return "PassagemIda{" +
+                "preco=" + getPreco() +
+                ", taxaEmbarque=" + getTaxaEmbarque() +
+                ", tipoPass=" + getTipoPass() +
+                ", ida=" + ida +
+                ", custoExtraTrecho=" + custoExtraTrecho +
+                '}';
+    }
 }
