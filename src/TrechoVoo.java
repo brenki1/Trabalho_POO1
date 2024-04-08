@@ -73,4 +73,16 @@ public class TrechoVoo {
 
     //Importante implementar os voos de cada trecho, representar o local de saída e chegada, saber a data e hora de chegada, Saber o nro de vagas disponíveis e preço da passagem(Que pode ser diferente para cada voo)
 
+    //Método que exibe textualmente os dados do trchoVoo
+    public String toString() {
+        return "TrechoVoo{" +
+                "codigo='" + codigo + '\'' +
+                ", origem='" + origem + '\'' +
+                ", destino='" + destino + '\'' +
+                ", HoraSaida='" + HoraSaida + '\'' +
+                ", HoraChegada='" + HoraChegada + '\'' +
+                ", VagasDisponíveis=" + VagasDisponíveis +
+                ", Nome=" + Nome +
+                '}';
+    }
 }
