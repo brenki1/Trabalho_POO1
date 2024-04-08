@@ -45,5 +45,13 @@ public class Passagem {
 
         return 0;
     }
+    //Método que exibe textualmente os dados da Passagem
+    public String toString() {
+        return "Passagem{" +
+                "Preco=" + Preco +
+                ", taxaEmbarque=" + taxaEmbarque +
+                ", tipoPass=" + tipoPass +
+                '}';
+    }
 
 }
