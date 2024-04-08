@@ -30,7 +30,7 @@ public class DadosFuncionario {
             funcionarios.remove(funcionario); //Removendo um funcionário do vetor
             return true;
         }
-        return false; // Funcionário não encontrado
+        return false; // Caso o funcionário não seja encontrado
     }
 
     // Método para listar todos os funcionários

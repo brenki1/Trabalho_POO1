@@ -33,4 +33,8 @@ public class CompanhiaAerea extends Empresa {
     public double getValorUdi() { //Retornando o valor a ser pago
         return ValorUdi;
     }
+    //Método ToString para representar textualmente os dados da empresa aerea
+    public String toString() {
+        return "CompanhiaAerea{" + "CNPJ='" + getCNPJ() + '\'' + ", nomeOF='" + getNomeOF() + '\'' + ", nomeDIV='" + getNomeDIV() + '\'' + ", dataCriacao='" + getDataCriacao() + '\'' + ", PrecoPass=" + PrecoPass + ", ValorUdi=" + ValorUdi + '}';
+    }
 }
