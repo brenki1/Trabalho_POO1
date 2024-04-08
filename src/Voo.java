@@ -55,4 +55,14 @@ public class Voo {
 
         this.precoPassagem = precoPassagem;
     }
+    //Método que exibe textualmente os dados dos Voos
+    public String toString() {
+        return "Voo{" +
+                "trecho=" + Trecho +
+                ", assentos=" + Assentos +
+                ", horaSaida=" + HoraSaida +
+                ", horaChegada=" + HoraChegada +
+                ", precoPassagem=" + precoPassagem +
+                '}';
+    }
 }
