@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+
 public class Hotel extends Empresa {
+
+
     private String endereco;
     private int stars;
     private boolean accPets;
@@ -22,7 +26,7 @@ public class Hotel extends Empresa {
     private String descricao;
     private double ValorUdi; //Valor fixo a ser pago para o Udi Decola
 
-    //faltam alguns campos
+    private ArrayList<FuncionarioExecutivo> funcionariosParceiros = new ArrayList<>();
 
     public Hotel() {}
     public Hotel(String cnpj, String nomeOF, String nomeDIV, String dataCriacao, String endereco, int stars, boolean accPets, int quartos_Single, int quartos_Duplos, int quartos_Triplos, double valorDiariaSingle,  double valorDiariaDuplo, double valorDiariaTriplo, double desconto, boolean cancelar, String msgDiv, String descricao, String checkin, String checkout, double valorudi){
@@ -189,7 +193,15 @@ public class Hotel extends Empresa {
     }
 
     public double aplicaDesconto (double valorDiaria, double desconto) {
-        return valorDiaria - (valorDiaria*desconto); // isso caso o desconto seja em porcentagem, ou faremos com valor fixo?
+        return valorDiaria - (valorDiaria*desconto);
+    }
+
+    public ArrayList<FuncionarioExecutivo> getFuncionariosParceiros() {
+        return funcionariosParceiros;
+    }
+
+    public void setFuncionariosParceiros(ArrayList<FuncionarioExecutivo> funcionariosParceiros) {
+        this.funcionariosParceiros = funcionariosParceiros;
     }
 
     //Método para calcular o valor a ser pago para o Udi_Decola

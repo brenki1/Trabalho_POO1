@@ -1,27 +1,35 @@
+import java.util.ArrayList;
+
 public class FuncionarioExecutivo extends Funcionario{
-    private int qtdParcerias;
+
     private static double comissaoParceria = 25.00;
 
-    public FuncionarioExecutivo(String nome, String dataNascimento, String CPF, String endereco, String nroCLT, double salario, int qtdParcerias){
+    private ArrayList<Hotel> hoteisParceiros = new ArrayList<>();
+
+    public FuncionarioExecutivo(String nome, String dataNascimento, String CPF, String endereco, String nroCLT, double salario, ArrayList<Hotel> hoteisParceiros){
         super(nome, dataNascimento, CPF, endereco, nroCLT, salario);
-        this.qtdParcerias = qtdParcerias;
+        this.hoteisParceiros = hoteisParceiros;
     }
 
     public int getQtdParcerias() {
-        return qtdParcerias;
+        return  hoteisParceiros.size();
     }
 
-    public void setQtdParcerias(int qtdParcerias) {
-        this.qtdParcerias = qtdParcerias;
-    }
 
     public static double getComissaoParceria() {
         return comissaoParceria;
     }
 
     public double getSalario(){
-        return super.getSalario() + (qtdParcerias * comissaoParceria);
+        return super.getSalario() + (hoteisParceiros.size() * comissaoParceria);
     }
 
 
+    public ArrayList<Hotel> getHoteisParceiros() {
+        return hoteisParceiros;
+    }
+
+    public void setHoteisParceiros(ArrayList<Hotel> hoteisParceiros) {
+        this.hoteisParceiros = hoteisParceiros;
+    }
 }
