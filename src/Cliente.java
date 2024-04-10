@@ -3,21 +3,20 @@ import java.util.ArrayList;
 public class Cliente extends Pessoa {
     private String dataCad;
     private String email;
-    private static int nroClienteVip = 12; //Limite de compras para se tornar vip
-    private int Compras; //Representa o número de compra
-    private ArrayList<String[]>pesquisa; //Um arrayList de strings foi criado para armazenar as pesquisas feitas pelo cliente
 
+    private ArrayList<String[]>pesquisa; //Um arrayList de strings foi criado para armazenar as pesquisas feitas pelo cliente
+    private ArrayList<Compra> compras = new ArrayList<>(); //ArrayList de compras
     public Cliente () {}
 
     public Cliente (String CPF, String nome) {
         super(CPF, nome);
     }
 
-    public Cliente(String nome, String dataNascimento, String CPF, String endereco, String dataCad, String email, int compras) {
+    public Cliente(String nome, String dataNascimento, String CPF, String endereco, String dataCad, String email, ArrayList<Compra> compras) {
         super(nome, dataNascimento, CPF, endereco);
         this.dataCad = dataCad;
         this.email = email;
-        this.Compras = compras; //Adcionando as compras
+        this.compras = compras; //Adcionando as compras
         this.pesquisa = new ArrayList<>(); //Inicializando o vetor que armazena as pesquisas
     }
 
@@ -38,20 +37,14 @@ public class Cliente extends Pessoa {
         this.email = email;
     }
 
-    public void setCompras(int compras) {
-        Compras = compras;
+    public void setCompras(ArrayList<Compra> compras) {
+        compras = compras;
     }
 
-    public int getCompras() {
-        return Compras;
+    public ArrayList<Compra> getCompras() {
+        return compras;
     }
 
-    //Método que indica se é vip
-    public boolean cliente_Vip(){
-        if(this.Compras >= nroClienteVip) {
-            return true;
-        }else return false;
-    }
 
     //Método para registrar as pesquisas
     public void RegistroPesquisa(String origem, String destino, String dataInicio, String dataFim){
@@ -100,6 +93,11 @@ public class Cliente extends Pessoa {
         if(cont == 5) return true;
 
         return false;
+    }
+
+    //Método para adicionar uma compra
+    public void addCompra(Compra compra){
+        compras.add(compra);
     }
 
     //Método To-String, foi implementado para obetermos uma representação de texto Legível de um objeto do tipo Cliente quando for usado na interface gráfica

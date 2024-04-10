@@ -11,7 +11,6 @@ public class Compra {
     private double valorTotal; //Valor total da compra
     private String Pagamento; //Forma de pagamento
     private int qtdCompras; //Indicando a quantidade de compras
-    private int AtualCompra; //Valor de compra que será atualizado no método
 
     //Construtuor para os atributos
     public Compra(){}
@@ -98,12 +97,8 @@ public class Compra {
     }
 
 
-    //Método para atualizar o número de compras, Talves seja necessário fazer isso apenas na classe cliente
-    public void atualizaCompra(int qtdCompras){
-        if(qtdCompras == 0 || qtdCompras > 0){
-            AtualCompra = comprador.getCompras(); //Atribuindo à variável o valor de compra
-            comprador.setCompras(AtualCompra + 1); //Adcionando 1 ao número de compras
-        }
+    public void atualizaCompra(){
+        comprador.addCompra(this);
     }
 
     //Montar o método para calcular o valor total
@@ -126,14 +121,14 @@ public class Compra {
 
     //Método para efetivar a compra de passagens aéreas
 
-    public void EfetivarPassagem(int qtdPassagem){
+    public void EfetivarPassagem(){
         int Novo; //Variável que atualiza o novo número de passagens
         if(passagem.getAssentos().getQtdDisponivelAssentos() >= qtdPassagem){
             Novo = passagem.getAssentos().getQtdDisponivelAssentos() - qtdPassagem;
             passagem.getAssentos().setQtdDisponivelAssentos(Novo); //Atualizando passagens disponíveis
 
             this.valorTotal += qtdPassagem * passagem.getPrecoPassagem();
-            atualizaCompra(qtdPassagem);
+            atualizaCompra();
         }
     }
 
@@ -161,7 +156,7 @@ public class Compra {
             Total = quartoDisp * diarias;
 
             this.valorTotal += Total; //Atualizando Valor total
-            atualizaCompra(qtdDiarias); //Atualizando Compras
+            atualizaCompra(); //Atualizando Compras
         }
     }
 
@@ -177,7 +172,6 @@ public class Compra {
                 ", valorTotal=" + valorTotal +
                 ", Pagamento='" + Pagamento + '\'' +
                 ", qtdCompras=" + qtdCompras +
-                ", AtualCompra=" + AtualCompra +
                 '}';
     }
 

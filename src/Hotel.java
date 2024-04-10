@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
 public class Hotel extends Empresa {
-
-
     private String endereco;
     private int stars;
     private boolean accPets;
