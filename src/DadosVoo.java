@@ -8,16 +8,6 @@ public class DadosVoo {
         voos.add(v);
     }
 
-
-    public Voo buscar(TrechoVoo trecho) {
-        for (Voo voo : voos) {
-            if (voo.getTrecho().equals(trecho)) {
-                return voo;
-            }
-        }
-        return null; // Retorna null se não encontrar o voo com o trecho especificado
-    }
-
     public boolean excluir(Voo v) {
         return voos.remove(v); // Remove o voo da lista e retorna true se a remoção for bem-sucedida
     }
