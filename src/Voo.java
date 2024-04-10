@@ -1,18 +1,51 @@
 import java.time.*;
 
 public class Voo {
-    private TrechoVoo Trecho;
+    private boolean ehIda;
+    private boolean ehIdaVolta;
+    private PassagemIda passIda;
+    private PassagemIda_Volta passIdaVolta;
     private Assento Assentos;
     private LocalDateTime HoraSaida;
     private LocalDateTime HoraChegada;
     private double precoPassagem;
 
+    public boolean isEhIda() {
+        return ehIda;
+    }
+
+    public void setEhIda(boolean ehIda) {
+        this.ehIda = ehIda;
+    }
+
+    public boolean isEhIdaVolta() {
+        return ehIdaVolta;
+    }
+
+    public void setEhIdaVolta(boolean ehIdaVolta) {
+        this.ehIdaVolta = ehIdaVolta;
+    }
+
+    public PassagemIda getPassIda() {
+        return passIda;
+    }
+
+    public void setPassIda(PassagemIda passIda) {
+        this.passIda = passIda;
+    }
+
+    public PassagemIda_Volta getPassIdaVolta() {
+        return passIdaVolta;
+    }
+
+    public void setPassIdaVolta(PassagemIda_Volta passIdaVolta) {
+        this.passIdaVolta = passIdaVolta;
+    }
 
     public Voo(){}
 
     public Voo(TrechoVoo Trecho,Assento assentos, String horaSaida, String horaChegada, double precoPassagem){
         setPrecoPassagem(precoPassagem);
-        setTrecho(Trecho);
         setAssentos(assentos);
         setHoraSaida(horaSaida);
         setHoraChegada(horaChegada);
@@ -32,13 +65,6 @@ public class Voo {
         this.HoraChegada = VerificaData.dataHoraCorreta(HoraChegada);
     }
 
-    public TrechoVoo getTrecho() {
-        return Trecho;
-    }
-
-    public void setTrecho(TrechoVoo trecho) {
-        Trecho = trecho;
-    }
 
     public Assento getAssentos() {
         return Assentos;
@@ -56,14 +82,21 @@ public class Voo {
 
         this.precoPassagem = precoPassagem;
     }
-    //Método que exibe textualmente os dados dos Voos
+
+    @Override
     public String toString() {
         return "Voo{" +
-                "trecho=" + Trecho +
-                ", assentos=" + Assentos +
-                ", horaSaida=" + HoraSaida +
-                ", horaChegada=" + HoraChegada +
+                "ehIda=" + ehIda +
+                ", ehIdaVolta=" + ehIdaVolta +
+                ", passIda=" + passIda +
+                ", passIdaVolta=" + passIdaVolta +
+                ", Assentos=" + Assentos +
+                ", HoraSaida=" + HoraSaida +
+                ", HoraChegada=" + HoraChegada +
                 ", precoPassagem=" + precoPassagem +
                 '}';
     }
 }
+
+
+

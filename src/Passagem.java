@@ -1,4 +1,4 @@
-public class Passagem {
+public abstract class Passagem {
 
     private double Preco;
     private double taxaEmbarque;
