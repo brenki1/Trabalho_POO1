@@ -32,4 +32,9 @@ public class FuncionarioExecutivo extends Funcionario{
     public void setHoteisParceiros(ArrayList<Hotel> hoteisParceiros) {
         this.hoteisParceiros = hoteisParceiros;
     }
+
+    //Método ToString para representar textualmente os dados do Funcionário Executivo
+    public String toString() {
+        return "Funcionario{" + "nome='" + getNome() + '\'' + ", CPF='" + getCPF() + '\'' + ", dataNascimento='" + getDataNascimento() + '\'' + ", endereco='" + getEndereco() + '\'' + ", nroCLT='" + getNroCLT() + '\'' + ", salario=" + getSalario() + '}';
+    }
 }

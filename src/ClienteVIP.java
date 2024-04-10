@@ -29,4 +29,8 @@ public class ClienteVIP extends Cliente{
     public static int getNroComprasVip() {
         return nroComprasVip;
     }
+
+    public String ToString(){
+        return "Nome: " + getNome() + ", Data de Cadastro: " + getDataCad() + ", Email: " + getEmail() + ", Número de Compras: " + getCompras() + ", Desconto VIP: " + getDescontoVip() + ", Data VIP: " + getDataVip();
+    }
 }
