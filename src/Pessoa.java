@@ -12,6 +12,11 @@ public abstract class Pessoa implements Serializable {
 
     public Pessoa() {}
 
+    public Pessoa (String CPF, String Nome){
+        this.CPF = CPF;
+        this.nome = Nome;
+    }
+
     public Pessoa (String nome, String dataNascimento, String CPF, String endereco) { //falta implementar as verificacoes necessárias, por enqt é só a base
         this.nome = nome;
         this.dataNascimento = dataNascimento;

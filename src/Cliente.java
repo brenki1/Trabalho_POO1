@@ -9,6 +9,10 @@ public class Cliente extends Pessoa {
 
     public Cliente () {}
 
+    public Cliente (String CPF, String nome) {
+        super(CPF, nome);
+    }
+
     public Cliente(String nome, String dataNascimento, String CPF, String endereco, String dataCad, String email, int compras) {
         super(nome, dataNascimento, CPF, endereco);
         this.dataCad = dataCad;

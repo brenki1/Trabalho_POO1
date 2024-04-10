@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Empresa {
+public abstract class Empresa {
     private String CNPJ;
     private String nomeOF;
     private String nomeDIV;

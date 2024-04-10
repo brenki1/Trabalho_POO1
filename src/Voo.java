@@ -7,6 +7,7 @@ public class Voo {
     private LocalDateTime HoraChegada;
     private double precoPassagem;
 
+
     public Voo(){}
 
     public Voo(TrechoVoo Trecho,Assento assentos, String horaSaida, String horaChegada, double precoPassagem){
