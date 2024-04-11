@@ -161,6 +161,15 @@ public class Compra {
             this.valorTotal += Total; //Atualizando Valor total
             atualizaCompra(); //Atualizando Compras
         }
+        //Condição para que o cliente se torne vip
+        if (comprador.getCompras().size() >= ClienteVIP.getNroComprasVip() && !(comprador instanceof ClienteVIP)) {
+            ClienteVIP clienteVip = new ClienteVIP(comprador.getNome(), comprador.getDataNascimento(), comprador.getCPF(),
+                    comprador.getEndereco(), comprador.getDataCad(), comprador.getEmail(),
+                    comprador.getCompras(), 10.0, VerificaData.dataAtual());
+            // Substitui o cliente atual pelo cliente VIP
+            comprador = clienteVip;
+        }
+
     }
 
     //Método para exibir textualmente os dados das compras
