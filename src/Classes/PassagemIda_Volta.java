@@ -50,9 +50,9 @@ public class PassagemIda_Volta extends Passagem {
 
         return 0;
     }
-    //Método que apresenta os dados da classe Classes.Passagem de volta
+    //Método que apresenta os dados da classe Passagem de volta
     public String toString() {
-        return "Classes.PassagemIda_Volta{" +
+        return "PassagemIda_Volta{" +
                 "ida=" + ida +
                 ", volta=" + volta +
                 ", custoExtraTrecho=" + custoExtraTrecho +

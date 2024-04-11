@@ -81,7 +81,7 @@ public class InterfaceGrafica extends JFrame {
                 new Insets(0, 0, 33, 16), 0, 0));
 
             //---- butCliente ----
-            butCliente.setText("Classes.Cliente");
+            butCliente.setText("Cliente");
             MenuPrincipal.add(butCliente, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 33, 16), 0, 0));

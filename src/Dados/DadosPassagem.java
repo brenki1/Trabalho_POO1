@@ -19,16 +19,16 @@ public class DadosPassagem {
                 return passagem;
             }
         }
-        return null; // Classes.Passagem não encontrada
+        return null; // Passagem não encontrada
     }
 
     public boolean excluir(double preco, double taxaEmbarque, int tipoPass) {
         Passagem passagem = buscar(preco, taxaEmbarque, tipoPass);
         if (passagem != null) {
             passagens.remove(passagem);
-            return true; // Classes.Passagem excluída com sucesso
+            return true; // Passagem excluída com sucesso
         }
-        return false; // Classes.Passagem não encontrada
+        return false; // Passagem não encontrada
     }
 
     public void listar() {

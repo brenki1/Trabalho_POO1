@@ -89,7 +89,7 @@ public class Voo {
 
     @Override
     public String toString() {
-        return "Classes.Voo{" +
+        return "Voo{" +
                 "ehIda=" + ehIda +
                 ", ehIdaVolta=" + ehIdaVolta +
                 ", passIda=" + passIda +

@@ -16,7 +16,7 @@ public class DadosVoo {
 
     public void listar() {
         for (Voo voo : voos) {
-            System.out.println(voo); // Chama automaticamente o método toString de Classes.Voo
+            System.out.println(voo); // Chama automaticamente o método toString de Voo
         }
     }
 

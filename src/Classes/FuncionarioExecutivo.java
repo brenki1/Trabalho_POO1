@@ -39,6 +39,6 @@ public class FuncionarioExecutivo extends Funcionario {
 
     //Método ToString para representar textualmente os dados do Funcionário Executivo
     public String toString() {
-        return "Classes.Funcionario{" + "nome='" + getNome() + '\'' + ", CPF='" + getCPF() + '\'' + ", dataNascimento='" + getDataNascimento() + '\'' + ", endereco='" + getEndereco() + '\'' + ", nroCLT='" + getNroCLT() + '\'' + ", salario=" + getSalario() + '}';
+        return "Funcionario{" + "nome='" + getNome() + '\'' + ", CPF='" + getCPF() + '\'' + ", dataNascimento='" + getDataNascimento() + '\'' + ", endereco='" + getEndereco() + '\'' + ", nroCLT='" + getNroCLT() + '\'' + ", salario=" + getSalario() + '}';
     }
 }

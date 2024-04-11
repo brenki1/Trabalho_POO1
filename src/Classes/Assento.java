@@ -46,7 +46,7 @@ public class Assento {
     }
     //Método que representa em formato se String os Dados dos atributos da classe assento
     public String toString() {
-        return "Classes.Assento{" +
+        return "Assento{" +
                 "qtdAssentos=" + qtdAssentos +
                 ", qtdDisponivelAssentos=" + qtdDisponivelAssentos +
                 ", esquemaAssentos=" + Arrays.deepToString(esquemaAssentos) + //Usado para representar o formato da matriz

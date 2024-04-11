@@ -3,7 +3,7 @@ package Dados;
 import java.util.ArrayList;
 import Classes.*;
 public class DadosHotel {
-    //Array que armazena os dados do Classes.Hotel
+    //Array que armazena os dados do Hotel
     private ArrayList<Hotel>hoteis;
 
     public DadosHotel() {

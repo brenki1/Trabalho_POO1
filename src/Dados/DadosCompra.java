@@ -22,7 +22,7 @@ public class DadosCompra {
                 return compra;
             }
         }
-        return null; // Classes.Compra não encontrada
+        return null; // Compra não encontrada
     }
 
     // Método para excluir uma compra
@@ -35,7 +35,7 @@ public class DadosCompra {
     // Método para listar todas as compras
     public void listar() {
         for (Compra compra : compras) {
-            System.out.println(compra); // Supondo que Classes.Compra tenha um método toString() implementado
+            System.out.println(compra); // Supondo que Compra tenha um método toString() implementado
         }
     }
 }

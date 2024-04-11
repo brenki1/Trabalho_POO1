@@ -47,9 +47,9 @@ public abstract class Passagem {
 
         return 0;
     }
-    //Método que exibe textualmente os dados da Classes.Passagem
+    //Método que exibe textualmente os dados da Passagem
     public String toString() {
-        return "Classes.Passagem{" +
+        return "Passagem{" +
                 "Preco=" + Preco +
                 ", taxaEmbarque=" + taxaEmbarque +
                 ", tipoPass=" + tipoPass +

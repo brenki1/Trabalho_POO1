@@ -231,9 +231,9 @@ public class Hotel extends Empresa {
         return ValorUdi * DiariasVendidas; //Retornando o valor
     }
 
-    //Método para representar textualmente os dados do Classes.Hotel
+    //Método para representar textualmente os dados do Hotel
     public String toString() {
-        return "Classes.Hotel{" +
+        return "Hotel{" +
                 "endereco='" + endereco + '\'' +
                 ", stars=" + stars +
                 ", accPets=" + accPets +

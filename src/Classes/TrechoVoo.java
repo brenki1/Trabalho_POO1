@@ -69,7 +69,7 @@ public abstract class TrechoVoo {
 
     //Método que exibe textualmente os dados do trchoVoo
     public String toString() {
-        return "Classes.TrechoVoo{" +
+        return "TrechoVoo{" +
                 "codigo='" + codigo + '\'' +
                 ", origem='" + origem + '\'' +
                 ", destino='" + destino + '\'' +
