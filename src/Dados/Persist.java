@@ -1,12 +1,8 @@
 package Dados;
-
-import Classes.Cliente;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 
 public  class Persist {
     public static boolean gravar(Object a, String arquivo) {
