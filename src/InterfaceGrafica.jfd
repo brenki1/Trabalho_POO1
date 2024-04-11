@@ -1,0 +1,74 @@
+JFDML JFormDesigner: "8.2.2.0.382" Java: "17.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 0, 0"
+			"$rowSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0"
+			"$hGap": 16
+			"$vGap": 33
+			"$alignTop": true
+		} ) {
+			name: "MenuPrincipal"
+			"minimumSize": new java.awt.Dimension( 1280, 720 )
+			"maximumSize": new java.awt.Dimension( 1280, 720 )
+			"border": new javax.swing.border.MatteBorder( 2, 1, 1, 1, sfield java.awt.Color black )
+			"preferredSize": new java.awt.Dimension( 1280, 720 )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "msgBemvindoPrinc"
+				"text": "Seja bem-vindo ao Udi-Decola!"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 5, false )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "butFunc"
+				"text": "Funcionário"
+				"alignmentX": 10.0f
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/3293559.png" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/Bandeira_de_Uberlândia.svg.png" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "msgMenuAcess"
+				"text": "Por favor, selecione como deseja acessar o sistema:"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 2, false )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"gridwidth": 2
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "butCliente"
+				"text": "Cliente"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 2
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "butAdm"
+				"text": "Admin"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 8
+				"vAlign": 5
+				"hAlign": 5
+				"weightx": -9.0
+				"weighty": -8.0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 50, 95 )
+			"size": new java.awt.Dimension( 620, 515 )
+		} )
+	}
+}
