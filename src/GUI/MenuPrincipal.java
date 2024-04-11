@@ -5,21 +5,16 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.border.*;
 
-public class InterfaceGrafica extends JFrame {
 
-    public InterfaceGrafica() {
+public class MenuPrincipal extends JFrame   {
+
+    public MenuPrincipal() {
         initComponents();
-    }
-
-    private void createUIComponents() {
-        // TODO: add custom component creation code here
     }
 
     private void butClienteMouseClicked(MouseEvent e) {
         // TODO add your code here
     }
-
-
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
@@ -31,8 +26,6 @@ public class InterfaceGrafica extends JFrame {
         msgMenuAcess = new JLabel();
         butCliente = new JButton();
         butAdm = new JButton();
-        MenuCliente = new JPanel();
-        label1 = new JLabel();
 
         //======== MenuPrincipal ========
         {
@@ -41,8 +34,8 @@ public class InterfaceGrafica extends JFrame {
             MenuPrincipal.setBorder(new MatteBorder(2, 1, 1, 1, Color.black));
             MenuPrincipal.setPreferredSize(new Dimension(1280, 720));
             MenuPrincipal.setLayout(new GridBagLayout());
-            ((GridBagLayout)MenuPrincipal.getLayout()).rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-            ((GridBagLayout)MenuPrincipal.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+            ((GridBagLayout)MenuPrincipal.getLayout()).rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            ((GridBagLayout)MenuPrincipal.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 
             //---- msgBemvindoPrinc ----
             msgBemvindoPrinc.setText("Seja bem-vindo ao Udi-Decola!");
@@ -91,30 +84,15 @@ public class InterfaceGrafica extends JFrame {
 
             //---- butAdm ----
             butAdm.setText("Admin");
-            MenuPrincipal.add(butAdm, new GridBagConstraints(1, 8, 1, 1, -9.0, -8.0,
+            MenuPrincipal.add(butAdm, new GridBagConstraints(1, 4, 1, 1, -9.0, -8.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-                new Insets(0, 0, 0, 16), 0, 0));
-        }
-
-        //======== MenuCliente ========
-        {
-            MenuCliente.setLayout(new GridBagLayout());
-            ((GridBagLayout)MenuCliente.getLayout()).columnWidths = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-            ((GridBagLayout)MenuCliente.getLayout()).rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0};
-            ((GridBagLayout)MenuCliente.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
-            ((GridBagLayout)MenuCliente.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
-
-            //---- label1 ----
-            label1.setText("text");
-            MenuCliente.add(label1, new GridBagConstraints(8, 5, 1, 1, 0.0, 0.0,
-                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-                new Insets(0, 0, 0, 0), 0, 0));
+                new Insets(0, 0, 33, 16), 0, 0));
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
-    private JPanel MenuPrincipal;
+    public JPanel MenuPrincipal;
     private JLabel msgBemvindoPrinc;
     private JButton butFunc;
     private JLabel label2;
@@ -122,11 +100,9 @@ public class InterfaceGrafica extends JFrame {
     private JLabel msgMenuAcess;
     private JButton butCliente;
     private JButton butAdm;
-    private JPanel MenuCliente;
-    private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
 
         int verif = 0;
@@ -139,5 +115,5 @@ public class InterfaceGrafica extends JFrame {
         UITeste.setSize(638,500);
         UITeste.setTitle("UDI-Decola");
         UITeste.setResizable(true);
-    }
+    }*/
 }

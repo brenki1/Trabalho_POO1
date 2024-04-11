@@ -5,7 +5,7 @@ new FormModel {
 	root: new FormRoot {
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
 			"$columnSpecs": "0, 0, 0"
-			"$rowSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0"
+			"$rowSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
 			"$hGap": 16
 			"$vGap": 33
 			"$alignTop": true
@@ -61,7 +61,7 @@ new FormModel {
 				"text": "Admin"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 				"gridx": 1
-				"gridy": 8
+				"gridy": 4
 				"vAlign": 5
 				"hAlign": 5
 				"weightx": -9.0
@@ -70,26 +70,6 @@ new FormModel {
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 50, 95 )
 			"size": new java.awt.Dimension( 620, 515 )
-		} )
-		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
-			"$columnSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0"
-			"$rowSpecs": "0, 0, 0, 0, 0, 0"
-			"$hGap": 5
-			"$vGap": 5
-			"$alignLeft": true
-			"$alignTop": true
-		} ) {
-			name: "MenuCliente"
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label1"
-				"text": "text"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
-				"gridx": 8
-				"gridy": 5
-			} )
-		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 45, 680 )
-			"size": new java.awt.Dimension( 620, 350 )
 		} )
 	}
 }
