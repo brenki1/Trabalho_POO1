@@ -102,18 +102,4 @@ public class MenuPrincipal extends JFrame   {
     private JButton butAdm;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 
-    /*public static void main(String[] args) {
-
-
-        int verif = 0;
-
-        InterfaceGrafica UITeste = new InterfaceGrafica();
-        UITeste.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        //UITeste.initComponents();
-        UITeste.setVisible(true);
-        UITeste.setContentPane(UITeste.MenuPrincipal);
-        UITeste.setSize(638,500);
-        UITeste.setTitle("UDI-Decola");
-        UITeste.setResizable(true);
-    }*/
 }
