@@ -15,20 +15,15 @@ new FormModel {
 			"maximumSize": new java.awt.Dimension( 1280, 720 )
 			"border": new javax.swing.border.MatteBorder( 2, 1, 1, 1, sfield java.awt.Color black )
 			"preferredSize": new java.awt.Dimension( 1280, 720 )
+			auxiliary() {
+				"JavaCodeGenerator.variableModifiers": 1
+			}
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "msgBemvindoPrinc"
 				"text": "Seja bem-vindo ao Udi-Decola!"
 				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 5, false )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 				"gridx": 1
-			} )
-			add( new FormComponent( "javax.swing.JButton" ) {
-				name: "butFunc"
-				"text": "Funcionário"
-				"alignmentX": 10.0f
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
-				"gridx": 1
-				"gridy": 3
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label2"

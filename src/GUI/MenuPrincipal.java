@@ -20,7 +20,6 @@ public class MenuPrincipal extends JFrame   {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         MenuPrincipal = new JPanel();
         msgBemvindoPrinc = new JLabel();
-        butFunc = new JButton();
         label2 = new JLabel();
         label3 = new JLabel();
         msgMenuAcess = new JLabel();
@@ -41,13 +40,6 @@ public class MenuPrincipal extends JFrame   {
             msgBemvindoPrinc.setText("Seja bem-vindo ao Udi-Decola!");
             msgBemvindoPrinc.setFont(msgBemvindoPrinc.getFont().deriveFont(msgBemvindoPrinc.getFont().getStyle() | Font.BOLD, msgBemvindoPrinc.getFont().getSize() + 5f));
             MenuPrincipal.add(msgBemvindoPrinc, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-                new Insets(0, 0, 33, 16), 0, 0));
-
-            //---- butFunc ----
-            butFunc.setText("Funcion\u00e1rio");
-            butFunc.setAlignmentX(10.0F);
-            MenuPrincipal.add(butFunc, new GridBagConstraints(1, 3, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 33, 16), 0, 0));
 
@@ -94,7 +86,6 @@ public class MenuPrincipal extends JFrame   {
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     public JPanel MenuPrincipal;
     private JLabel msgBemvindoPrinc;
-    private JButton butFunc;
     private JLabel label2;
     private JLabel label3;
     private JLabel msgMenuAcess;
