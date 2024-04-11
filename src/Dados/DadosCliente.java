@@ -39,7 +39,7 @@ public class DadosCliente { //Classe que armazena os dados do Cliente
     //Método para listar todos os clientes
     public void listar(){
         for(Cliente cliente : clientes){
-            System.out.println(cliente); //Será impresso pelo método to String na classe Cliente
+            System.out.println(cliente.ToString()); //Será impresso pelo método to String na classe Cliente
         }
     }
 
