@@ -1,3 +1,7 @@
+package Classes;
+
+
+
 public abstract class TrechoVoo {
     private String codigo; //Código identificador 3 dígitos
     private String origem; //Local de origem
@@ -65,7 +69,7 @@ public abstract class TrechoVoo {
 
     //Método que exibe textualmente os dados do trchoVoo
     public String toString() {
-        return "TrechoVoo{" +
+        return "Classes.TrechoVoo{" +
                 "codigo='" + codigo + '\'' +
                 ", origem='" + origem + '\'' +
                 ", destino='" + destino + '\'' +

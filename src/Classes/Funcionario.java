@@ -1,3 +1,5 @@
+package Classes;
+
 public class Funcionario extends Pessoa {
     private String nroCLT;
     private double salario;
@@ -81,7 +83,7 @@ public class Funcionario extends Pessoa {
 
     //Método ToString para representar textualmente os dados do Funcionário
     public String toString() {
-        return "Funcionario{" + "nome='" + getNome() + '\'' + ", CPF='" + getCPF() + '\'' + ", dataNascimento='" + getDataNascimento() + '\'' + ", endereco='" + getEndereco() + '\'' + ", nroCLT='" + nroCLT + '\'' + ", salario=" + salario + '}';
+        return "Classes.Funcionario{" + "nome='" + getNome() + '\'' + ", CPF='" + getCPF() + '\'' + ", dataNascimento='" + getDataNascimento() + '\'' + ", endereco='" + getEndereco() + '\'' + ", nroCLT='" + nroCLT + '\'' + ", salario=" + salario + '}';
     }
 
 

@@ -1,13 +1,20 @@
-public class PassagemIda extends Passagem {
+package Classes;
+
+
+
+public class PassagemIda_Volta extends Passagem {
 
     private TrechoVoo ida;
+    private TrechoVoo volta;
     private double custoExtraTrecho;
 
-    public PassagemIda(){}
-    public PassagemIda(double preco, double txemb, int tipo, TrechoVoo ida, double custoExtra) {
-        super(preco, txemb, tipo);
+    public PassagemIda_Volta() {}
+
+    public PassagemIda_Volta(double preco, double txemb, int tipo, TrechoVoo ida, TrechoVoo volta, double custoExtraTrecho){
+        super(preco,txemb,tipo);
         this.ida = ida;
-        custoExtraTrecho = custoExtra;
+        this.volta = volta;
+        this.custoExtraTrecho = custoExtraTrecho;
     }
 
     public TrechoVoo getIda() {
@@ -16,6 +23,14 @@ public class PassagemIda extends Passagem {
 
     public void setIda(TrechoVoo ida) {
         this.ida = ida;
+    }
+
+    public TrechoVoo getVolta() {
+        return volta;
+    }
+
+    public void setVolta(TrechoVoo volta) {
+        this.volta = volta;
     }
 
     public double getCustoExtraTrecho() {
@@ -35,14 +50,18 @@ public class PassagemIda extends Passagem {
 
         return 0;
     }
-    //Método usado para representar em formato de string os dados da passagem de ida
+    //Método que apresenta os dados da classe Classes.Passagem de volta
     public String toString() {
-        return "PassagemIda{" +
-                "preco=" + getPreco() +
+        return "Classes.PassagemIda_Volta{" +
+                "ida=" + ida +
+                ", volta=" + volta +
+                ", custoExtraTrecho=" + custoExtraTrecho +
+                ", Preco=" + getPreco() +
                 ", taxaEmbarque=" + getTaxaEmbarque() +
                 ", tipoPass=" + getTipoPass() +
-                ", ida=" + ida +
-                ", custoExtraTrecho=" + custoExtraTrecho +
                 '}';
     }
+
+
+
 }

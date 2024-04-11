@@ -1,6 +1,9 @@
+package Classes;
+
+
 import java.util.ArrayList;
 
-public class ClienteVIP extends Cliente{
+public class ClienteVIP extends Cliente {
     private static int nroComprasVip = 10;
     private double descontoVip;
     private String dataVip;

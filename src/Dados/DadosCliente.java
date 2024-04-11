@@ -1,7 +1,10 @@
-import java.util.ArrayList;
+package Dados;
 
-public class DadosCliente { //Classe que armazena os dados do Cliente
-    private ArrayList<Cliente> clientes; //Array que armazena os dados do Cliente
+import java.util.ArrayList;
+import Classes.*;
+
+public class DadosCliente { //Classe que armazena os dados do Classes.Cliente
+    private ArrayList<Cliente> clientes; //Array que armazena os dados do Classes.Cliente
 
     //Construtor que inicializa o vetor quando um objeto da classe é instanciado
     public DadosCliente(){
@@ -36,7 +39,7 @@ public class DadosCliente { //Classe que armazena os dados do Cliente
     //Método para listar todos os clientes
     public void listar(){
         for(Cliente cliente : clientes){
-            System.out.println(cliente); //Será impresso pelo método to String na classe Cliente
+            System.out.println(cliente); //Será impresso pelo método to String na classe Classes.Cliente
         }
     }
 

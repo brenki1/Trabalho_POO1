@@ -1,4 +1,7 @@
+package Dados;
+
 import java.util.ArrayList;
+import Classes.*;
 public class DadosClienteVIP {
     private ArrayList<ClienteVIP> clientes; //Vetor de clientes
 
@@ -19,7 +22,7 @@ public class DadosClienteVIP {
                 return cliente;
             }
         }
-        return null; // Caso o Cliente não seja encontrado
+        return null; // Caso o Classes.Cliente não seja encontrado
     }
 
     // Método para excluir um cliente pelo CPF

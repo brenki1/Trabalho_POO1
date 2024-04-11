@@ -1,3 +1,5 @@
+package Classes;
+
 public class CompanhiaAerea extends Empresa {
     private double PrecoPass; //Preço da passagem
     private double ValorUdi; //Valor a ser pago para o Udi Decola

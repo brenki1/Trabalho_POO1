@@ -1,4 +1,7 @@
+package Dados;
+
 import java.util.ArrayList;
+import Classes.*;
 public class DadosFuncionarioExecutivo {
     private ArrayList<FuncionarioExecutivo> funcionarios; //Vetor de funcionários
 

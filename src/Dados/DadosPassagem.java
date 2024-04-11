@@ -1,5 +1,7 @@
-import java.util.ArrayList;
+package Dados;
 
+import java.util.ArrayList;
+import Classes.*;
 public class DadosPassagem {
     //Array para os dados da passagem
     private ArrayList<Passagem>passagens;
@@ -17,16 +19,16 @@ public class DadosPassagem {
                 return passagem;
             }
         }
-        return null; // Passagem não encontrada
+        return null; // Classes.Passagem não encontrada
     }
 
     public boolean excluir(double preco, double taxaEmbarque, int tipoPass) {
         Passagem passagem = buscar(preco, taxaEmbarque, tipoPass);
         if (passagem != null) {
             passagens.remove(passagem);
-            return true; // Passagem excluída com sucesso
+            return true; // Classes.Passagem excluída com sucesso
         }
-        return false; // Passagem não encontrada
+        return false; // Classes.Passagem não encontrada
     }
 
     public void listar() {

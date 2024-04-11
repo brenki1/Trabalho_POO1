@@ -1,8 +1,11 @@
-import java.time.*;
+package Classes;
+
+import Classes.Cliente;
+
 import java.time.format.DateTimeFormatter;
 
 public class Compra {
-    private Cliente comprador; //Cliente
+    private Cliente comprador; //Classes.Cliente
     private Voo passagem;
     private Hotel hotel;
     private int qtdPassagem; //Quantidade de passagens
@@ -132,7 +135,7 @@ public class Compra {
         }
     }
 
-    //Método para efetivar a compra de Diárias no Hotel
+    //Método para efetivar a compra de Diárias no Classes.Hotel
     public void EfetivarDiaria(int qtdDiarias, int TipoQuarto){
         int quartoDisp = 0; //Armazena o número de quartos disponíveis
         double diarias = 0; //Valor da diária

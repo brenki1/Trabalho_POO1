@@ -1,3 +1,6 @@
+package Classes;
+
+
 import java.util.ArrayList;
 
 public class Hotel extends Empresa {
@@ -228,9 +231,9 @@ public class Hotel extends Empresa {
         return ValorUdi * DiariasVendidas; //Retornando o valor
     }
 
-    //Método para representar textualmente os dados do Hotel
+    //Método para representar textualmente os dados do Classes.Hotel
     public String toString() {
-        return "Hotel{" +
+        return "Classes.Hotel{" +
                 "endereco='" + endereco + '\'' +
                 ", stars=" + stars +
                 ", accPets=" + accPets +

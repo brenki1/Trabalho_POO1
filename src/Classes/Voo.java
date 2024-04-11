@@ -1,3 +1,7 @@
+package Classes;
+
+
+
 import java.time.*;
 
 public class Voo {
@@ -44,7 +48,7 @@ public class Voo {
 
     public Voo(){}
 
-    public Voo(TrechoVoo Trecho,Assento assentos, String horaSaida, String horaChegada, double precoPassagem){
+    public Voo(TrechoVoo Trecho, Assento assentos, String horaSaida, String horaChegada, double precoPassagem){
         setPrecoPassagem(precoPassagem);
         setAssentos(assentos);
         setHoraSaida(horaSaida);
@@ -85,7 +89,7 @@ public class Voo {
 
     @Override
     public String toString() {
-        return "Voo{" +
+        return "Classes.Voo{" +
                 "ehIda=" + ehIda +
                 ", ehIdaVolta=" + ehIdaVolta +
                 ", passIda=" + passIda +

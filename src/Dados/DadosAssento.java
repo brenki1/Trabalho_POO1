@@ -1,5 +1,9 @@
+package Dados;
+
 import java.util.ArrayList;
 import java.util.List;
+import Classes.*;
+
 
 public class DadosAssento {
 

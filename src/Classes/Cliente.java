@@ -1,3 +1,5 @@
+package Classes;
+
 import java.util.ArrayList;
 
 public class Cliente extends Pessoa {
@@ -100,7 +102,7 @@ public class Cliente extends Pessoa {
         compras.add(compra);
     }
 
-    //Método To-String, foi implementado para obetermos uma representação de texto Legível de um objeto do tipo Cliente quando for usado na interface gráfica
+    //Método To-String, foi implementado para obetermos uma representação de texto Legível de um objeto do tipo Classes.Cliente quando for usado na interface gráfica
     public String ToString(){
         return "Nome: " + getNome() + ", Data de Cadastro: " + getDataCad() + ", Email: " + getEmail() + ", Número de Compras: " + getCompras();
     }

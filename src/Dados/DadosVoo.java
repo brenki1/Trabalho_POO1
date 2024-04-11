@@ -1,5 +1,7 @@
-import java.util.ArrayList;
+package Dados;
 
+import java.util.ArrayList;
+import Classes.*;
 public class DadosVoo {
     //Array que armazena os dados dos voos
     private ArrayList<Voo> voos = new ArrayList<>();
@@ -14,7 +16,7 @@ public class DadosVoo {
 
     public void listar() {
         for (Voo voo : voos) {
-            System.out.println(voo); // Chama automaticamente o método toString de Voo
+            System.out.println(voo); // Chama automaticamente o método toString de Classes.Voo
         }
     }
 

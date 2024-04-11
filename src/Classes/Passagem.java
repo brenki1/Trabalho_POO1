@@ -1,3 +1,5 @@
+package Classes;
+
 public abstract class Passagem {
 
     private double Preco;
@@ -45,9 +47,9 @@ public abstract class Passagem {
 
         return 0;
     }
-    //Método que exibe textualmente os dados da Passagem
+    //Método que exibe textualmente os dados da Classes.Passagem
     public String toString() {
-        return "Passagem{" +
+        return "Classes.Passagem{" +
                 "Preco=" + Preco +
                 ", taxaEmbarque=" + taxaEmbarque +
                 ", tipoPass=" + tipoPass +

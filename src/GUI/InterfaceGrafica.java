@@ -1,12 +1,10 @@
+package GUI;
+
 import java.awt.*;
-import javax.swing.*;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.LayoutStyle;
 import javax.swing.JFrame;
 import javax.swing.border.*;
 
@@ -64,13 +62,13 @@ public class InterfaceGrafica extends JFrame {
                 new Insets(0, 0, 33, 16), 0, 0));
 
             //---- label2 ----
-            label2.setIcon(new ImageIcon(getClass().getResource("/3293559.png")));
+            label2.setIcon(new ImageIcon(getClass().getResource("/GUI/3293559.png")));
             MenuPrincipal.add(label2, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 33, 0), 0, 0));
 
             //---- label3 ----
-            label3.setIcon(new ImageIcon(getClass().getResource("/Bandeira_de_Uberl\u00e2ndia.svg.png")));
+            label3.setIcon(new ImageIcon(getClass().getResource("/GUI/Bandeira_de_Uberl\u00e2ndia.svg.png")));
             MenuPrincipal.add(label3, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 33, 16), 0, 0));
@@ -83,7 +81,7 @@ public class InterfaceGrafica extends JFrame {
                 new Insets(0, 0, 33, 16), 0, 0));
 
             //---- butCliente ----
-            butCliente.setText("Cliente");
+            butCliente.setText("Classes.Cliente");
             MenuPrincipal.add(butCliente, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 33, 16), 0, 0));

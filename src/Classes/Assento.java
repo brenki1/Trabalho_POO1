@@ -1,3 +1,5 @@
+package Classes;
+
 import java.util.Arrays;
 
 public class Assento {
@@ -44,7 +46,7 @@ public class Assento {
     }
     //Método que representa em formato se String os Dados dos atributos da classe assento
     public String toString() {
-        return "Assento{" +
+        return "Classes.Assento{" +
                 "qtdAssentos=" + qtdAssentos +
                 ", qtdDisponivelAssentos=" + qtdDisponivelAssentos +
                 ", esquemaAssentos=" + Arrays.deepToString(esquemaAssentos) + //Usado para representar o formato da matriz

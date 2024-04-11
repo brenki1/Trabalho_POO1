@@ -1,5 +1,7 @@
-import java.util.ArrayList;
+package Dados;
 
+import java.util.ArrayList;
+import Classes.*;
 public class DadosTrechoVoo {
     //Vetor que armazena os dados do Trecho
     private ArrayList<TrechoVoo>vetTrechos = new ArrayList<>();

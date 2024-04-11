@@ -1,5 +1,7 @@
-import java.util.ArrayList;
+package Dados;
 
+import java.util.ArrayList;
+import Classes.*;
 public class DadosPassagemIda {
 
     private ArrayList<PassagemIda> passagensIda;
