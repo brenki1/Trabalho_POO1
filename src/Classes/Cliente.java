@@ -14,11 +14,11 @@ public class Cliente extends Pessoa {
         super(CPF, nome);
     }
 
-    public Cliente(String nome, String dataNascimento, String CPF, String endereco, String dataCad, String email, ArrayList<Compra> compras) {
+    public Cliente(String nome, String dataNascimento, String CPF, String endereco, String dataCad, String email) {
         super(nome, dataNascimento, CPF, endereco);
         this.dataCad = dataCad;
         this.email = email;
-        this.compras = compras; //Adcionando as compras
+        this.compras = new ArrayList<>(); //Inicializando o vetor que armazena as compras
         this.pesquisa = new ArrayList<>(); //Inicializando o vetor que armazena as pesquisas
     }
 
@@ -104,7 +104,7 @@ public class Cliente extends Pessoa {
 
     //Método To-String, foi implementado para obetermos uma representação de texto Legível de um objeto do tipo Cliente quando for usado na interface gráfica
     public String ToString(){
-        return "Nome: " + getNome() + ", Data de Cadastro: " + getDataCad() + ", Email: " + getEmail() + ", Número de Compras: " + getCompras();
+        return "Nome: " + getNome() + ", Data de Cadastro: " + getDataCad() + ", Email: " + getEmail() + ", Compras: " + getCompras();
     }
 
 

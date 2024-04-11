@@ -8,7 +8,7 @@ public class ClienteVIP extends Cliente {
     private double descontoVip;
     private String dataVip;
     public ClienteVIP(String nome, String dataNascimento, String CPF, String endereco, String dataCad, String email, ArrayList<Compra> compras, double descontoVip, String dataVip){
-        super(nome, dataNascimento, CPF, endereco, dataCad, email, compras);
+        super(nome, dataNascimento, CPF, endereco, dataCad, email);
         this.descontoVip = descontoVip;
         this.dataVip = dataVip;
     }
