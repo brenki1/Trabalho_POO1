@@ -5,10 +5,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 public class EditaTabela {
-    public static void main(String[] args) {
-        Cliente cliente = new Cliente("Jovem", "12/12/2000", "09832222664", "Rua dos Jariracas", "12/12/2021", "joao@gmail.com");
-        atualizar(cliente);
-    }
+
     public static void inserir(Cliente cliente) {
         Connection connection = null;
         Statement statement = null;
