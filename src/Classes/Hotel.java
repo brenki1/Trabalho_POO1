@@ -2,6 +2,7 @@ package Classes;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Hotel extends Empresa {
     private String endereco;
@@ -29,6 +30,8 @@ public class Hotel extends Empresa {
 
     private ArrayList<FuncionarioExecutivo> funcionariosParceiros = new ArrayList<>();
 
+    private HashMap<String, HashMap<Integer, Integer>> disponibilidade; //Esse HashMap foi criado para representar a disponibilidade de quartos em uma detrminada data, a primeira String representa uma data, e o HashMap posterior indica um inteiro para representar um tipo de quarto e outro inteiro para representar a quantidade de quartos
+
     public Hotel() {}
     public Hotel(String cnpj, String nomeOF, String nomeDIV, String dataCriacao, String endereco, int stars, boolean accPets, int quartos_Single, int quartos_Duplos, int quartos_Triplos, double valorDiariaSingle,  double valorDiariaDuplo, double valorDiariaTriplo, double desconto, boolean cancelar, String msgDiv, String descricao, String checkin, String checkout, double valorudi){
         super(cnpj, nomeOF, nomeDIV, dataCriacao);
@@ -48,6 +51,7 @@ public class Hotel extends Empresa {
         this.checkout = checkout;
         this.cancelar = cancelar;
         this.ValorUdi = valorudi;
+        this.disponibilidade = new HashMap<>(); //Inicializando o HashMap
     }
 
     public String getEndereco() {
@@ -229,6 +233,17 @@ public class Hotel extends Empresa {
     //Método que calcula o valor para Udi
     public double ValorParaUdi(){
         return ValorUdi * DiariasVendidas; //Retornando o valor
+    }
+
+    //Método para atualizar a quantidade de quartos por datas
+    public void atualizarQuartos(String data, int tipo, int qtd ){ // 'tipo' Representa o tipo de quarto, 'qtd' representa a quantidade de quartos
+        HashMap<Integer, Integer>disp = disponibilidade.getOrDefault(data, new HashMap<>());
+        disp.put(tipo, qtd); //Atualizando a quantidade de quartos para o tipo de quarto espescificado
+        disponibilidade.put(data, disp); //Atualizando o mapa com as novas disponibilidades de quartos
+    }
+
+    public HashMap<Integer, Integer> getdisponibilidade(String data){ //Retorna a quantidade de quartos em uma determinada data
+        return disponibilidade.getOrDefault(data, new HashMap<>());
     }
 
     //Método para representar textualmente os dados do Hotel

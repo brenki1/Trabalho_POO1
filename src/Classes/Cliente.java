@@ -1,8 +1,9 @@
 package Classes;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Cliente extends Pessoa {
+public class Cliente extends Pessoa implements Serializable {
     private String dataCad;
     private String email;
 
