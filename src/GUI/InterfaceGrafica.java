@@ -1,23 +1,12 @@
 package GUI;
 
 import java.awt.*;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JFrame;
+import java.awt.event.*;
+import javax.swing.*;
 import javax.swing.border.*;
 
-/*
- * Created by JFormDesigner on Wed Apr 10 19:31:37 BRT 2024
- */
-
-
-
-/**
- * @author pagio
- */
 public class InterfaceGrafica extends JFrame {
+
     public InterfaceGrafica() {
         initComponents();
     }
@@ -25,6 +14,12 @@ public class InterfaceGrafica extends JFrame {
     private void createUIComponents() {
         // TODO: add custom component creation code here
     }
+
+    private void butClienteMouseClicked(MouseEvent e) {
+        // TODO add your code here
+    }
+
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
@@ -36,6 +31,8 @@ public class InterfaceGrafica extends JFrame {
         msgMenuAcess = new JLabel();
         butCliente = new JButton();
         butAdm = new JButton();
+        MenuCliente = new JPanel();
+        label1 = new JLabel();
 
         //======== MenuPrincipal ========
         {
@@ -82,6 +79,12 @@ public class InterfaceGrafica extends JFrame {
 
             //---- butCliente ----
             butCliente.setText("Cliente");
+            butCliente.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    butClienteMouseClicked(e);
+                }
+            });
             MenuPrincipal.add(butCliente, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 33, 16), 0, 0));
@@ -91,6 +94,21 @@ public class InterfaceGrafica extends JFrame {
             MenuPrincipal.add(butAdm, new GridBagConstraints(1, 8, 1, 1, -9.0, -8.0,
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 0, 16), 0, 0));
+        }
+
+        //======== MenuCliente ========
+        {
+            MenuCliente.setLayout(new GridBagLayout());
+            ((GridBagLayout)MenuCliente.getLayout()).columnWidths = new int[] {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            ((GridBagLayout)MenuCliente.getLayout()).rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0};
+            ((GridBagLayout)MenuCliente.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+            ((GridBagLayout)MenuCliente.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+
+            //---- label1 ----
+            label1.setText("text");
+            MenuCliente.add(label1, new GridBagConstraints(8, 5, 1, 1, 0.0, 0.0,
+                GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                new Insets(0, 0, 0, 0), 0, 0));
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -104,19 +122,22 @@ public class InterfaceGrafica extends JFrame {
     private JLabel msgMenuAcess;
     private JButton butCliente;
     private JButton butAdm;
+    private JPanel MenuCliente;
+    private JLabel label1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 
-
     public static void main(String[] args) {
+
+
+        int verif = 0;
+
         InterfaceGrafica UITeste = new InterfaceGrafica();
         UITeste.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        UITeste.initComponents();
+        //UITeste.initComponents();
         UITeste.setVisible(true);
         UITeste.setContentPane(UITeste.MenuPrincipal);
         UITeste.setSize(638,500);
         UITeste.setTitle("UDI-Decola");
         UITeste.setResizable(true);
-
-
     }
 }
