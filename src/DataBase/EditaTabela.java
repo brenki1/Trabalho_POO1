@@ -20,13 +20,13 @@ public class EditaTabela {
         }
     }
 
-    public static void deletar(Cliente cliente) {
+    public static void deletar(String CPF) {
         Connection connection = null;
         Statement statement = null;
         Conectar obj_Conectar = new Conectar();
         connection = obj_Conectar.get_connection();
         try{
-            String query = "delete from cliente where CPF = '"+cliente.getCPF()+"'";
+            String query = "delete from cliente where CPF = '"+CPF+"'";
             statement = connection.createStatement();
             statement.executeUpdate(query);
         }catch(Exception e){
