@@ -178,9 +178,9 @@ public class MenuPrincipal extends JFrame {
         {
             Remover.setLayout(new GridBagLayout());
 
-            //---- label1 ----
-            label1.setText("Insira o CPF de quem deseja remover:");
-            Remover.add(label1, new GridBagConstraints(2, 1, 4, 1, 0.0, 0.0,
+            //---- labelRemov ----
+            labelRemov.setText("Insira o CPF de quem deseja remover:");
+            Remover.add(labelRemov, new GridBagConstraints(2, 1, 4, 1, 0.0, 0.0,
                     GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                     new Insets(0, 0, 5, 20), 0, 0));
             Remover.add(fieldRemov, new GridBagConstraints(6, 1, 3, 1, 0.0, 0.0,
@@ -253,24 +253,24 @@ public class MenuPrincipal extends JFrame {
 
             //======== botaoCad ========
             {
-                botaoCad.setBorder(new EmptyBorder(12, 0, 0, 0));
-                botaoCad.setLayout(new GridBagLayout());
-                ((GridBagLayout)botaoCad.getLayout()).columnWidths = new int[] {0, 85, 80};
-                ((GridBagLayout)botaoCad.getLayout()).columnWeights = new double[] {1.0, 0.0, 0.0};
+                botaoCadADM.setBorder(new EmptyBorder(12, 0, 0, 0));
+                botaoCadADM.setLayout(new GridBagLayout());
+                ((GridBagLayout)botaoCadADM.getLayout()).columnWidths = new int[] {0, 85, 80};
+                ((GridBagLayout)botaoCadADM.getLayout()).columnWeights = new double[] {1.0, 0.0, 0.0};
 
                 //---- okCADADM ----
                 okCADADM.setText("OK");
-                botaoCad.add(okCADADM, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
+                botaoCadADM.add(okCADADM, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 5), 0, 0));
 
                 //---- cancelCADADM ----
                 cancelCADADM.setText("Cancel");
-                botaoCad.add(cancelCADADM, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
+                botaoCadADM.add(cancelCADADM, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 0), 0, 0));
             }
-            CadastroClienteADM.add(botaoCad, new GridBagConstraints(5, 6, 1, 1, 0.0, 0.0,
+            CadastroClienteADM.add(botaoCadADM, new GridBagConstraints(5, 6, 1, 1, 0.0, 0.0,
                     GridBagConstraints.EAST, GridBagConstraints.VERTICAL,
                     new Insets(0, 0, 0, 0), 0, 0));
         }

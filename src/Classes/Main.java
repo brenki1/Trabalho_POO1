@@ -71,6 +71,21 @@ public class Main extends JFrame {
            }
         });
 
+        Menu.okCADADM.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Cliente cAdm = new Cliente();
+                cAdm.setNome(Menu.txtNM.getText());
+                cAdm.setCPF(Menu.txtCPF.getText());
+                cAdm.setEndereco(Menu.textEND.getText());
+                cAdm.setEmail(Menu.txtEmail.getText());
+                cAdm.setDataNascimento(Menu.txtNM.getText());
+                cAdm.setDataCad(VerificaData.dataAtual());
+                System.out.println(cAdm.getNome());
+                //dc.cadastrar(cAdm);
+            }
+        });
+
         Menu.okBusca.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e9) {
