@@ -106,37 +106,45 @@ public abstract class Pessoa implements Serializable {
             return vet;
         }
 
-        private static boolean verificar(int pos, int[] cpf){ //Esse método vai pegar a posição do vetor, e verificar se eu estou verficando o primeiro digito(Verificador) ou o segundo
+        private static boolean verificar(int pos, int[] cpf) { //Esse método vai pegar a posição do vetor, e verificar se eu estou verficando o primeiro digito(Verificador) ou o segundo
             int mult = 0; //Inicializando o valor que irá multiplicar os valores dos 9 primeiros digitos do cpf
             int par, result = 0, resto; //"par" é o parâmetro que será usado para indicar até qual posição do vetor eu farei os cálculos para gerar o primeiro dígito ou o segundo, "result" guarda o resultado, resto guardará o resto da divisão
 
-            if(pos == 1){ //Se for o primeiro digito, mult inicia em 10
+            if (pos == 1) { //Se for o primeiro digito, mult inicia em 10
                 mult = 10;
-            }else{
+            } else {
                 mult = 11; //Se for o segundo dígito
             }
             par = 7 + pos; //Se for o primeiro digito eu utilizarei os 9 primeiros digitos, se for o 2 eu utilizarei os 10 primeiros
 
-            for(int i = 0; i <= par; i++){
+            for (int i = 0; i <= par; i++) {
                 result += mult * cpf[i];
                 mult--;  //Decrementando o valor do multiplicador até que chegue no digito indicado. Lembrando que ele irá decrementar até o número 2, seja para achar o primeiro digito verificador ou o segundo
             }
-            resto =  result % 11; //Atribuindo ao resto, a divisão do resultado por 11
-
-            if(resto < 2) {
-                if (cpf[par + 1] == 0) { //Verificando se o primeiro ou segundo código verificador será igual a 0
-                    if (pos == 1) {  //Verificando se a posição do vetor é 1, se o resto do primeiro digito verificador for menor que 2 eu preciso calcular o segundo digito
-                        return verificar(2, cpf); //Recursão com a posição igual a 2
+            resto = result % 11; //Atribuindo ao resto, a divisão do resultado por 11
+            if (resto < 2) {
+                if (cpf[par + 1] == 0) {
+                    if (pos == 1) {
+                        return verificar(2, cpf);
                     } else {
                         return true;
                     }
                 } else {
-                    return false; //Falso
+                    return false;
+                }
+            } else {
+                // Calcular o dígito verificador esperado
+                int digitoEsperado = 11 - resto;
+                // Comparar o dígito verificador esperado com o dígito verificador fornecido no CPF
+                if (digitoEsperado == cpf[par + 1]) {
+                    return true; // CPF válido
+                } else {
+                    return false; // CPF inválido
                 }
             }
-            return true;
         }
-    }
+
+}
 
 
 
