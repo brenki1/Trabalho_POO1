@@ -11,6 +11,10 @@ public class CompanhiaAerea extends Empresa {
         this.PrecoPass = PrecoPass;
     }
 
+    public CompanhiaAerea(String cnpj, String nomeOF, String nomeDIV, String dataCriacao){
+        super(cnpj, nomeOF, nomeDIV, dataCriacao);
+    }
+
     //Métodos get e set
     public void setPrecoPass(double PrecoPass){
         if(PrecoPass > 0 ) {

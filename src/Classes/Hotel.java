@@ -54,6 +54,17 @@ public class Hotel extends Empresa {
         this.disponibilidade = new HashMap<>(); //Inicializando o HashMap
     }
 
+    public Hotel(String cnpj, String nomeOF, String nomeDIV, String dataCriacao, String endereco, int stars, boolean accPets, int quartos_Single, int quartos_Duplos, int quartos_Triplos){
+        super(cnpj, nomeOF, nomeDIV, dataCriacao);
+        this.endereco = endereco;
+        this.stars = stars;
+        this.accPets = accPets;
+        this.quartos_Single =quartos_Single;
+        this.quartos_Duplos = quartos_Duplos;
+        this.quartos_Triplos = quartos_Triplos;
+
+    }
+
     public String getEndereco() {
 
         return endereco;
