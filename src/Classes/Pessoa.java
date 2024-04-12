@@ -81,10 +81,8 @@ public abstract class Pessoa implements Serializable {
             int[] vet = CPFtoArray(CPF); //Transformando meu cpf em array
 
             if(verificar(1, vet) == true){ //Passando como parâmetro a primeira posição
-                System.out.println("O CPF" + CPF + "e valido");
                 return true;
             }else{
-                System.out.println("O CPF" + CPF + "e invalido");
                 return false;
             }
         }

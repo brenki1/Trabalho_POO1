@@ -2,6 +2,7 @@ package Classes;
 
 import Dados.DadosCliente;
 import GUI.*;
+import DataBase.EditaTabela;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -9,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.awt.Dialog;
 import java.awt.event.MouseListener;
 import java.util.Scanner;
+
 
 public class Main extends JFrame {
 

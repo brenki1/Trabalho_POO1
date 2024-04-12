@@ -15,12 +15,7 @@ public class Conectar {
         try{
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, user, password);
-            if(connection != null){
-                System.out.println("Conexão realizada com sucesso");
-            }
-            else{
-                System.out.println("Conexão falhou");
-            }
+
         }catch (Exception e){
             System.out.println(e);
         }

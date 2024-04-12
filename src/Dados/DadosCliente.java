@@ -11,7 +11,7 @@ public class DadosCliente { //Classe que armazena os dados do Cliente
         this.clientes = new ArrayList<>();
     }
 
-    public static void  inicializaClientes(){
+    public void  inicializaClientes(){
         clientes = (ArrayList<Cliente>) Persist.recuperar("clientes.dat");
         if(clientes == null){
             clientes = new ArrayList<Cliente>();
@@ -19,7 +19,7 @@ public class DadosCliente { //Classe que armazena os dados do Cliente
     }
 
     //Método para cadastrar um cliente
-    public static void cadastrar(Cliente cliente){
+    public void cadastrar(Cliente cliente){
         clientes.add(cliente); //Adcionando um cliente ao vetor
         boolean r = Persist.gravar(clientes, "clientes.dat");
     }
