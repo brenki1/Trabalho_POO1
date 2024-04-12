@@ -118,7 +118,7 @@ new FormModel {
 		} )
 		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
 			"$columnSpecs": "0, 0, 0, 0, 0, 0"
-			"$rowSpecs": "0, 0, 0, 0, 0, 0"
+			"$rowSpecs": "0, 0, 0, 0, 0, 0, 0"
 			"$hGap": 5
 			"$vGap": 5
 			"$alignTop": true
@@ -180,6 +180,19 @@ new FormModel {
 				"gridy": 4
 				"gridwidth": 5
 			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Data de Nascimento:"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 5
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField5"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 5
+				"gridwidth": 5
+			} )
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
 				"$columnSpecs": "0:1.0, 80, 80"
 				"$rowSpecs": "0"
@@ -193,7 +206,6 @@ new FormModel {
 					"text": "OK"
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 					"gridx": 1
-					"gridy": 0
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "cancelButton"
@@ -203,7 +215,7 @@ new FormModel {
 					"gridy": 0
 				} )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
-				"gridy": 5
+				"gridy": 6
 				"gridx": 5
 				"hAlign": 4
 			} )

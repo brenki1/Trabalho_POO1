@@ -1,5 +1,7 @@
 package GUI;
 
+import Classes.Cliente;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -18,7 +20,10 @@ public class MenuPrincipal extends JFrame {
         butCliente.addActionListener(tratador);
         Cadastrar.addActionListener(tratador);
         Logar.addActionListener(tratador);
-
+        okButton.addActionListener(tratador);
+        okButton2.addActionListener(tratador);
+        cancelButton.addActionListener(tratador);
+        cancelButton2.addActionListener(tratador);
     }
 
 
@@ -86,7 +91,6 @@ public class MenuPrincipal extends JFrame {
                 GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                 new Insets(0, 0, 33, 16), 0, 0));
         }
-
 
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
     }
@@ -204,6 +208,8 @@ public class MenuPrincipal extends JFrame {
         textField3 = new JTextField();
         label6 = new JLabel();
         textField4 = new JTextField();
+        label7 = new JLabel();
+        textField5 = new JTextField();
         botaoCad = new JPanel();
         okButton = new JButton();
         cancelButton = new JButton();
@@ -212,8 +218,8 @@ public class MenuPrincipal extends JFrame {
         //======== CadastroCliente ========
         {
             CadastroCliente.setLayout(new GridBagLayout());
-            ((GridBagLayout)CadastroCliente.getLayout()).rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0};
-            ((GridBagLayout)CadastroCliente.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
+            ((GridBagLayout)CadastroCliente.getLayout()).rowHeights = new int[] {0, 0, 0, 0, 0, 0, 0, 0};
+            ((GridBagLayout)CadastroCliente.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 
             //---- label1 ----
             label1.setText("Nome:");
@@ -251,6 +257,15 @@ public class MenuPrincipal extends JFrame {
                     GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                     new Insets(0, 0, 5, 0), 0, 0));
 
+            //---- label7 ----
+            label7.setText("Data de Nascimento:");
+            CadastroCliente.add(label7, new GridBagConstraints(0, 5, 1, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                    new Insets(0, 0, 5, 5), 0, 0));
+            CadastroCliente.add(textField5, new GridBagConstraints(1, 5, 5, 1, 0.0, 0.0,
+                    GridBagConstraints.CENTER, GridBagConstraints.BOTH,
+                    new Insets(0, 0, 5, 0), 0, 0));
+
             //======== botaoCad ========
             {
                 botaoCad.setBorder(new EmptyBorder(12, 0, 0, 0));
@@ -270,7 +285,7 @@ public class MenuPrincipal extends JFrame {
                         GridBagConstraints.CENTER, GridBagConstraints.BOTH,
                         new Insets(0, 0, 0, 0), 0, 0));
             }
-            CadastroCliente.add(botaoCad, new GridBagConstraints(5, 5, 1, 1, 0.0, 0.0,
+            CadastroCliente.add(botaoCad, new GridBagConstraints(5, 6, 1, 1, 0.0, 0.0,
                     GridBagConstraints.EAST, GridBagConstraints.VERTICAL,
                     new Insets(0, 0, 0, 0), 0, 0));
         }
@@ -287,29 +302,31 @@ public class MenuPrincipal extends JFrame {
     public JButton butAdm;
     public JPanel ClienteLogin;
     private JLabel Pergunta;
-    private JButton Logar;
+    public JButton Logar;
     private JLabel Pergunta2;
-    private JButton Cadastrar;
+    public JButton Cadastrar;
     public JPanel CadastroCliente;
     private JLabel label1;
-    private JTextField textField1;
+    public JTextField textField1;
     private JLabel label4;
-    private JTextField textField2;
+    public JTextField textField2;
     private JLabel label5;
-    private JTextField textField3;
+    public JTextField textField3;
     private JLabel label6;
-    private JTextField textField4;
+    public JTextField textField4;
+    private JLabel label7;
+    public JTextField textField5;
     private JPanel botaoCad;
-    private JButton okButton;
-    private JButton cancelButton;
+    public JButton okButton;
+    public JButton cancelButton;
     public JPanel LoginCliente;
     private JLabel LogCPF;
-    private JTextField CPFLogInsert;
+    public JTextField CPFLogInsert;
     private JLabel LogEmail;
-    private JTextField EmailLogInsert;
+    public JTextField EmailLogInsert;
     private JPanel botaoLogin;
-    private JButton okButton2;
-    private JButton cancelButton2;
+    public JButton okButton2;
+    public JButton cancelButton2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables  @formatter:on
 
     private class TrataBotoes implements ActionListener {
@@ -331,6 +348,32 @@ public class MenuPrincipal extends JFrame {
                 LoginCliente.setVisible(true);
                 setContentPane(LoginCliente);
             }
+
+            if(e.getSource() == cancelButton) {
+                CadastroCliente.setVisible(false);
+                ClienteLogin.setVisible(true);
+                setContentPane(ClienteLogin);
+            }
+
+            if(e.getSource() == cancelButton2) {
+                LoginCliente.setVisible(false);
+                ClienteLogin.setVisible(true);
+                setContentPane(ClienteLogin);
+            }
+
+            if(e.getSource() == okButton) {
+                CadastroCliente.setVisible(false);
+                ClienteLogin.setVisible(true);
+                setContentPane(ClienteLogin);
+            }
+
+            if(e.getSource() == okButton2) {
+                LoginCliente.setVisible(false);
+                ClienteLogin.setVisible(true);
+                setContentPane(ClienteLogin);
+            }
+
+
         }
     }
 
