@@ -1,6 +1,7 @@
 package Classes;
 
 import Dados.DadosCliente;
+import Dados.*;
 import GUI.*;
 import DataBase.EditaTabela;
 
@@ -25,6 +26,8 @@ public class Main extends JFrame {
 
         DadosCliente dc = new DadosCliente();
         dc.inicializaClientes();
+
+        DadosCompanhiaAerea dcaer = new DadosCompanhiaAerea();
         Menu.okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -38,7 +41,7 @@ public class Main extends JFrame {
                 dc.cadastrar(c);
                 EditaTabela.inserir(c);
             }
-        });
+        }); //okCADAM //okBusca
 
 
         Menu.okButton2.addActionListener(new ActionListener() {
@@ -50,6 +53,41 @@ public class Main extends JFrame {
             }
         });
 
+        Menu.confirmaRemov.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e3){
+               dc.Excluir(Menu.fieldRemov.getText());
+               EditaTabela.deletar(Menu.fieldRemov.getText());
+           }
+        });
 
+        Menu.CADcompAer.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e4){
+               CompanhiaAerea c = new CompanhiaAerea();
+               c.setCNPJ(Menu.txtCNPJAER.getText());
+               c.setNomeDIV(Menu.txtNomeDiv.getText());
+               c.setNomeOF(Menu.txtNomeoff.getText());
+               c.setDataCriacao(Menu.txtDataCriacaoAer.getText());
+               dcaer.cadastrar(c);
+           }
+        });
+
+        Menu.okBusca.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e9) {
+                Cliente buscado = new Cliente();
+                JOptionPane.showMessageDialog(null," "+ buscado.getNome());
+
+            }
+        });
+
+        Menu.cadHotel.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e5){
+               Hotel h = new Hotel();
+               h.setEndereco(Menu.txtEndHotel.getText());
+               h.setNomeDIV(Menu.txtNomeDiv2.getText());
+               h.setNomeOF(Menu.txtNomeoff2.getText());
+
+            }
+        });
     }
 }
