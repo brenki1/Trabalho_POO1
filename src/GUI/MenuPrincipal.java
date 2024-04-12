@@ -946,6 +946,18 @@ private class TrataBotoes implements ActionListener {
             setContentPane(CadastroClienteADM);
         }
 
+        if(e.getSource() == okCADADM){
+            CadastroClienteADM.setVisible(false);
+            MenuAdmins.setVisible(true);
+            setContentPane(MenuAdmins);
+        }
+
+        if(e.getSource() == cancelCADADM){
+            CadastroClienteADM.setVisible(false);
+            MenuAdmins.setVisible(true);
+            setContentPane(MenuAdmins);
+        }
+
         if(e.getSource() == button3) {
             MenuAdmins.setVisible(false);
             Remover.setVisible(true);

@@ -32,16 +32,22 @@ public class Main extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Cliente c = new Cliente();
+                String validoC;
                 c.setNome(Menu.textField1.getText());
                 c.setCPF(Menu.textField2.getText());
                 c.setEndereco(Menu.textField3.getText());
                 c.setEmail(Menu.textField4.getText());
                 c.setDataNascimento(Menu.textField5.getText());
                 c.setDataCad(VerificaData.dataAtual());
+                validoC = c.getCPF();
+                if(validoC == null){
+                    JOptionPane.showMessageDialog(null,"CPF Invalido!");
+                    return;
+                }
                 dc.cadastrar(c);
                 EditaTabela.inserir(c);
             }
-        }); //okCADAM //okBusca
+        });
 
 
         Menu.okButton2.addActionListener(new ActionListener() {
@@ -75,14 +81,20 @@ public class Main extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Cliente cAdm = new Cliente();
+                String validoADM;
                 cAdm.setNome(Menu.txtNM.getText());
                 cAdm.setCPF(Menu.txtCPF.getText());
                 cAdm.setEndereco(Menu.textEND.getText());
                 cAdm.setEmail(Menu.txtEmail.getText());
                 cAdm.setDataNascimento(Menu.txtNM.getText());
                 cAdm.setDataCad(VerificaData.dataAtual());
-                System.out.println(cAdm.getNome());
-                //dc.cadastrar(cAdm);
+                validoADM = cAdm.getCPF();
+                if(validoADM == null){
+                    JOptionPane.showMessageDialog(null,"CPF Inválido!");
+                    return;
+                }
+                dc.cadastrar(cAdm);
+                EditaTabela.inserir(cAdm);
             }
         });
 
