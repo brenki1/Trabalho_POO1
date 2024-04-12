@@ -44,11 +44,12 @@ public class Main extends JFrame {
         Menu.okButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e2) {
-                Cliente c2 = new Cliente();
                 if((dc.Buscar(Menu.CPFLogInsert.getText()) == null)) {
-                    //JOptionPane.showInternalMessageDialog(,"Não foi encontrado seu CPF na base de dados!","CPF INVALIDO!", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"CPF Invalido!");
                 }
             }
         });
+
+
     }
 }
